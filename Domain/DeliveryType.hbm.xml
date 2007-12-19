@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+
+  <class name="DeliveryType" table="Ecommerce_DeliveryType" lazy="true">
+
+		<id name="_DeliveryTypeid" column="deliveryTypeID" type="Int16" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="name" type="String" name="_Name" not-null="true" length="50" />
+		<property column="status" type="Boolean" name="_Status" not-null="true" />
+		<property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
+		<property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="country_name_ad"><value>Andorra</value></data>
+<data name="country_name_ae"><value>United Arab Emirates</value></data>
+<data name="country_name_af"><value>Afghanistan</value></data>
+<data name="country_name_ag"><value>Antigua And Barbuda</value></data>
+<data name="country_name_ai"><value>Anguilla</value></data>
+<data name="country_name_al"><value>Albania</value></data>
+<data name="country_name_am"><value>Armenia</value></data>
+<data name="country_name_an"><value>Netherlands Antilles</value></data>
+<data name="country_name_ao"><value>Angola</value></data>
+<data name="country_name_aq"><value>Antarctica</value></data>
+<data name="country_name_ar"><value>Argentina</value></data>
+<data name="country_name_as"><value>American Samoa</value></data>
+<data name="country_name_at"><value>Austria</value></data>
+<data name="country_name_au"><value>Australia</value></data>
+<data name="country_name_aw"><value>Aruba</value></data>
+<data name="country_name_ax"><value>Åland Islands</value></data>
+<data name="country_name_az"><value>Azerbaijan</value></data>
+<data name="country_name_ba"><value>Bosnia And Herzegowina</value></data>
+<data name="country_name_bb"><value>Barbados</value></data>
+<data name="country_name_bd"><value>Bangladesh</value></data>
+<data name="country_name_be"><value>Belgium</value></data>
+<data name="country_name_bf"><value>Burkina Faso</value></data>
+<data name="country_name_bg"><value>Bulgaria</value></data>
+<data name="country_name_bh"><value>Bahrain</value></data>
+<data name="country_name_bi"><value>Burundi</value></data>
+<data name="country_name_bj"><value>Benin</value></data>
+<data name="country_name_bm"><value>Bermuda</value></data>
+<data name="country_name_bn"><value>Brunei Darussalam</value></data>
+<data name="country_name_bo"><value>Bolivia</value></data>
+<data name="country_name_br"><value>Brazil</value></data>
+<data name="country_name_bs"><value>Bahamas</value></data>
+<data name="country_name_bt"><value>Bhutan</value></data>
+<data name="country_name_bv"><value>Bouvet Island</value></data>
+<data name="country_name_bw"><value>Botswana</value></data>
+<data name="country_name_by"><value>Belarus</value></data>
+<data name="country_name_bz"><value>Belize</value></data>
+<data name="country_name_ca"><value>Canada</value></data>
+<data name="country_name_cc"><value>Cocos (Keeling) Islands</value></data>
+<data name="country_name_cd"><value>Congo, The Democratic Republic Of The</value></data>
+<data name="country_name_cf"><value>Central African Republic</value></data>
+<data name="country_name_cg"><value>Congo</value></data>
+<data name="country_name_ch"><value>Switzerland</value></data>
+<data name="country_name_ci"><value>Cote D'Ivoire</value></data>
+<data name="country_name_ck"><value>Cook Islands</value></data>
+<data name="country_name_cl"><value>Chile</value></data>
+<data name="country_name_cm"><value>Cameroon</value></data>
+<data name="country_name_cn"><value>China</value></data>
+<data name="country_name_co"><value>Colombia</value></data>
+<data name="country_name_cr"><value>Costa Rica</value></data>
+<data name="country_name_cu"><value>Cuba</value></data>
+<data name="country_name_cv"><value>Cape Verde</value></data>
+<data name="country_name_cx"><value>Christmas Island</value></data>
+<data name="country_name_cy"><value>Cyprus</value></data>
+<data name="country_name_cz"><value>Czech Republic</value></data>
+<data name="country_name_de"><value>Germany</value></data>
+<data name="country_name_dj"><value>Djibouti</value></data>
+<data name="country_name_dk"><value>Denmark</value></data>
+<data name="country_name_dm"><value>Dominica</value></data>
+<data name="country_name_do"><value>Dominican Republic</value></data>
+<data name="country_name_dz"><value>Algeria</value></data>
+<data name="country_name_ec"><value>Ecuador</value></data>
+<data name="country_name_ee"><value>Estonia</value></data>
+<data name="country_name_eg"><value>Egypt</value></data>
+<data name="country_name_eh"><value>Western Sahara</value></data>
+<data name="country_name_er"><value>Eritrea</value></data>
+<data name="country_name_es"><value>Spain</value></data>
+<data name="country_name_et"><value>Ethiopia</value></data>
+<data name="country_name_fi"><value>Finland</value></data>
+<data name="country_name_fj"><value>Fiji</value></data>
+<data name="country_name_fk"><value>Falkland Islands (Malvinas)</value></data>
+<data name="country_name_fm"><value>Micronesia, Federated States Of</value></data>
+<data name="country_name_fo"><value>Faroe Islands</value></data>
+<data name="country_name_fr"><value>France</value></data>
+<data name="country_name_fx"><value>France, Metropolitan</value></data>
+<data name="country_name_ga"><value>Gabon</value></data>
+<data name="country_name_gb"><value>United Kingdom</value></data>
+<data name="country_name_gd"><value>Grenada</value></data>
+<data name="country_name_ge"><value>Georgia</value></data>
+<data name="country_name_gf"><value>French Guiana</value></data>
+<data name="country_name_gg"><value>Guernsey</value></data>
+<data name="country_name_gh"><value>Ghana</value></data>
+<data name="country_name_gi"><value>Gibraltar</value></data>
+<data name="country_name_gl"><value>Greenland</value></data>
+<data name="country_name_gm"><value>Gambia</value></data>
+<data name="country_name_gn"><value>Guinea</value></data>
+<data name="country_name_gp"><value>Guadeloupe</value></data>
+<data name="country_name_gq"><value>Equatorial Guinea</value></data>
+<data name="country_name_gr"><value>Greece</value></data>
+<data name="country_name_gs"><value>South Georgia And The South Sandwich Islands</value></data>
+<data name="country_name_gt"><value>Guatemala</value></data>
+<data name="country_name_gu"><value>Guam</value></data>
+<data name="country_name_gw"><value>Guinea-bissau</value></data>
+<data name="country_name_gy"><value>Guyana</value></data>
+<data name="country_name_hk"><value>Hong Kong</value></data>
+<data name="country_name_hm"><value>Heard And Mc Donald Islands</value></data>
+<data name="country_name_hn"><value>Honduras</value></data>
+<data name="country_name_hr"><value>Croatia (Local Name: Hrvatska)</value></data>
+<data name="country_name_ht"><value>Haiti</value></data>
+<data name="country_name_hu"><value>Hungary</value></data>
+<data name="country_name_id"><value>Indonesia</value></data>
+<data name="country_name_ie"><value>Ireland</value></data>
+<data name="country_name_il"><value>Israel</value></data>
+<data name="country_name_im"><value>Isle Of Man</value></data>
+<data name="country_name_in"><value>India</value></data>
+<data name="country_name_io"><value>British Indian Ocean Territory</value></data>
+<data name="country_name_iq"><value>Iraq</value></data>
+<data name="country_name_ir"><value>Iran (Islamic Republic Of)</value></data>
+<data name="country_name_is"><value>Iceland</value></data>
+<data name="country_name_it"><value>Italy</value></data>
+<data name="country_name_je"><value>Jersey</value></data>
+<data name="country_name_jm"><value>Jamaica</value></data>
+<data name="country_name_jo"><value>Jordan</value></data>
+<data name="country_name_jp"><value>Japan</value></data>
+<data name="country_name_ke"><value>Kenya</value></data>
+<data name="country_name_kg"><value>Kyrgyzstan</value></data>
+<data name="country_name_kh"><value>Cambodia</value></data>
+<data name="country_name_ki"><value>Kiribati</value></data>
+<data name="country_name_km"><value>Comoros</value></data>
+<data name="country_name_kn"><value>Saint Kitts And Nevis</value></data>
+<data name="country_name_kp"><value>Korea, Democratic People's Republic Of</value></data>
+<data name="country_name_kr"><value>Korea, Republic Of</value></data>
+<data name="country_name_kw"><value>Kuwait</value></data>
+<data name="country_name_ky"><value>Cayman Islands</value></data>
+<data name="country_name_kz"><value>Kazakhstan</value></data>
+<data name="country_name_la"><value>Lao People's Democratic Republic</value></data>
+<data name="country_name_lb"><value>Lebanon</value></data>
+<data name="country_name_lc"><value>Saint Lucia</value></data>
+<data name="country_name_li"><value>Liechtenstein</value></data>
+<data name="country_name_lk"><value>Sri Lanka</value></data>
+<data name="country_name_lr"><value>Liberia</value></data>
+<data name="country_name_ls"><value>Lesotho</value></data>
+<data name="country_name_lt"><value>Lithuania</value></data>
+<data name="country_name_lu"><value>Luxembourg</value></data>
+<data name="country_name_lv"><value>Latvia</value></data>
+<data name="country_name_ly"><value>Libyan Arab Jamahiriya</value></data>
+<data name="country_name_ma"><value>Morocco</value></data>
+<data name="country_name_mc"><value>Monaco</value></data>
+<data name="country_name_md"><value>Moldova, Republic Of</value></data>
+<data name="country_name_me"><value>Montenegro</value></data>
+<data name="country_name_mg"><value>Madagascar</value></data>
+<data name="country_name_mh"><value>Marshall Islands</value></data>
+<data name="country_name_mk"><value>Macedonia, The Former Yugoslav Republic Of</value></data>
+<data name="country_name_ml"><value>Mali</value></data>
+<data name="country_name_mm"><value>Myanmar</value></data>
+<data name="country_name_mn"><value>Mongolia</value></data>
+<data name="country_name_mo"><value>Macau</value></data>
+<data name="country_name_mp"><value>Northern Mariana Islands</value></data>
+<data name="country_name_mq"><value>Martinique</value></data>
+<data name="country_name_mr"><value>Mauritania</value></data>
+<data name="country_name_ms"><value>Montserrat</value></data>
+<data name="country_name_mt"><value>Malta</value></data>
+<data name="country_name_mu"><value>Mauritius</value></data>
+<data name="country_name_mv"><value>Maldives</value></data>
+<data name="country_name_mw"><value>Malawi</value></data>
+<data name="country_name_mx"><value>Mexico</value></data>
+<data name="country_name_my"><value>Malaysia</value></data>
+<data name="country_name_mz"><value>Mozambique</value></data>
+<data name="country_name_na"><value>Namibia</value></data>
+<data name="country_name_nc"><value>New Caledonia</value></data>
+<data name="country_name_ne"><value>Niger</value></data>
+<data name="country_name_nf"><value>Norfolk Island</value></data>
+<data name="country_name_ng"><value>Nigeria</value></data>
+<data name="country_name_ni"><value>Nicaragua</value></data>
+<data name="country_name_nl"><value>Netherlands</value></data>
+<data name="country_name_no"><value>Norway</value></data>
+<data name="country_name_np"><value>Nepal</value></data>
+<data name="country_name_nr"><value>Nauru</value></data>
+<data name="country_name_nu"><value>Niue</value></data>
+<data name="country_name_nz"><value>New Zealand</value></data>
+<data name="country_name_om"><value>Oman</value></data>
+<data name="country_name_pa"><value>Panama</value></data>
+<data name="country_name_pe"><value>Peru</value></data>
+<data name="country_name_pf"><value>French Polynesia</value></data>
+<data name="country_name_pg"><value>Papua New Guinea</value></data>
+<data name="country_name_ph"><value>Philippines</value></data>
+<data name="country_name_pk"><value>Pakistan</value></data>
+<data name="country_name_pl"><value>Poland</value></data>
+<data name="country_name_pm"><value>St. Pierre And Miquelon</value></data>
+<data name="country_name_pn"><value>Pitcairn</value></data>
+<data name="country_name_pr"><value>Puerto Rico</value></data>
+<data name="country_name_ps"><value>Palestinian Territory, Occupied</value></data>
+<data name="country_name_pt"><value>Portugal</value></data>
+<data name="country_name_pw"><value>Palau</value></data>
+<data name="country_name_py"><value>Paraguay</value></data>
+<data name="country_name_qa"><value>Qatar</value></data>
+<data name="country_name_re"><value>Reunion</value></data>
+<data name="country_name_ro"><value>Romania</value></data>
+<data name="country_name_rs"><value>Serbia</value></data>
+<data name="country_name_ru"><value>Russian Federation</value></data>
+<data name="country_name_rw"><value>Rwanda</value></data>
+<data name="country_name_sa"><value>Saudi Arabia</value></data>
+<data name="country_name_sb"><value>Solomon Islands</value></data>
+<data name="country_name_sc"><value>Seychelles</value></data>
+<data name="country_name_sd"><value>Sudan</value></data>
+<data name="country_name_se"><value>Sweden</value></data>
+<data name="country_name_sg"><value>Singapore</value></data>
+<data name="country_name_sh"><value>St. Helena</value></data>
+<data name="country_name_si"><value>Slovenia</value></data>
+<data name="country_name_sj"><value>Svalbard And Jan Mayen Islands</value></data>
+<data name="country_name_sk"><value>Slovakia (Slovak Republic)</value></data>
+<data name="country_name_sl"><value>Sierra Leone</value></data>
+<data name="country_name_sm"><value>San Marino</value></data>
+<data name="country_name_sn"><value>Senegal</value></data>
+<data name="country_name_so"><value>Somalia</value></data>
+<data name="country_name_sr"><value>Suriname</value></data>
+<data name="country_name_st"><value>Sao Tome And Principe</value></data>
+<data name="country_name_sv"><value>El Salvador</value></data>
+<data name="country_name_sy"><value>Syrian Arab Republic</value></data>
+<data name="country_name_sz"><value>Swaziland</value></data>
+<data name="country_name_tc"><value>Turks And Caicos Islands</value></data>
+<data name="country_name_td"><value>Chad</value></data>
+<data name="country_name_tf"><value>French Southern Territories</value></data>
+<data name="country_name_tg"><value>Togo</value></data>
+<data name="country_name_th"><value>Thailand</value></data>
+<data name="country_name_tj"><value>Tajikistan</value></data>
+<data name="country_name_tk"><value>Tokelau</value></data>
+<data name="country_name_tl"><value>Timor-Leste</value></data>
+<data name="country_name_tm"><value>Turkmenistan</value></data>
+<data name="country_name_tn"><value>Tunisia</value></data>
+<data name="country_name_to"><value>Tonga</value></data>
+<data name="country_name_tp"><value>East Timor</value></data>
+<data name="country_name_tr"><value>Turkey</value></data>
+<data name="country_name_tt"><value>Trinidad And Tobago</value></data>
+<data name="country_name_tv"><value>Tuvalu</value></data>
+<data name="country_name_tw"><value>Taiwan, Province Of China</value></data>
+<data name="country_name_tz"><value>Tanzania, United Republic Of</value></data>
+<data name="country_name_ua"><value>Ukraine</value></data>
+<data name="country_name_ug"><value>Uganda</value></data>
+<data name="country_name_um"><value>United States Minor Outlying Islands</value></data>
+<data name="country_name_us"><value>United States</value></data>
+<data name="country_name_uy"><value>Uruguay</value></data>
+<data name="country_name_uz"><value>Uzbekistan</value></data>
+<data name="country_name_va"><value>Holy See (Vatican City State)</value></data>
+<data name="country_name_vc"><value>Saint Vincent And The Grenadines</value></data>
+<data name="country_name_ve"><value>Venezuela</value></data>
+<data name="country_name_vg"><value>Virgin Islands (British)</value></data>
+<data name="country_name_vi"><value>Virgin Islands (U.S.)</value></data>
+<data name="country_name_vn"><value>Vietnam</value></data>
+<data name="country_name_vu"><value>Vanuatu</value></data>
+<data name="country_name_wf"><value>Wallis And Futuna Islands</value></data>
+<data name="country_name_ws"><value>Samoa</value></data>
+<data name="country_name_ye"><value>Yemen</value></data>
+<data name="country_name_yt"><value>Mayotte</value></data>
+<data name="country_name_yu"><value>Serbia And Montenegro</value></data>
+<data name="country_name_za"><value>South Africa</value></data>
+<data name="country_name_zm"><value>Zambia</value></data>
+<data name="country_name_zw"><value>Zimbabwe</value></data>
+
+</root>

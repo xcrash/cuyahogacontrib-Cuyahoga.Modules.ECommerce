@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+	<class name="UserDetail" table="Ecommerce_UserDetail">
+
+    <id name="_Userid" type="Int64" unsaved-value="0">
+      <column name="userID" sql-type="bigint" not-null="true" unique="true" index="PK_UserDetails"/>
+      <generator class="native" />
+    </id>
+
+    <property column="firstName" type="String" name="FirstName" not-null="true" length="100" />
+    <property column="lastName" type="String" name="LastName" not-null="false" length="100" />
+    <property column="emailAddress" type="String" name="EmailAddress" not-null="false" length="200" />
+    <property column="companyName" type="String" name="CompanyName" not-null="false" length="100" />
+    <property column="accountNumber" type="String" name="AccountNumber" not-null="false" length="100" />
+    <property column="accountTypeID" type="Int16" name="_AccountTypeID" not-null="true" />
+
+		<many-to-one name="_Addressid" column="addressID" class="Address" />
+		<property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
+		<property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
+
+  </class>
+</hibernate-mapping>

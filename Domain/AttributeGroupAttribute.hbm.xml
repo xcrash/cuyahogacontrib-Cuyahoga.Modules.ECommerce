@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+	<class name="AttributeGroupAttribute" table="Ecommerce_AttributeGroupAttribute" lazy="true">
+
+		<composite-id access="field">
+			 <key-property name="_AttributeGroupid" column="attributeGroupID" type="Int16" />
+			 <key-property name="_Attributeid" column="attributeID" type="Int32" />
+			
+		</composite-id>
+		<!-- Composite primary key is experimental. View the documentation for syntax. --><!-- problems: gustavohe@gmail.com -->
+		<property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
+		<property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
+
+    <many-to-one name="AttributeGroup" class="AttributeGroup" column="attributeGroupID" cascade="none" insert="false" update="false" />
+    <many-to-one name="Attribute" class="Attribute" column="attributeID" cascade="none" insert="false" update="false" />
+	</class>
+</hibernate-mapping>

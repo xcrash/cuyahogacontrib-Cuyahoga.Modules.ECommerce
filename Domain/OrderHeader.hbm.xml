@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+
+  <class name="OrderHeader" table="Ecommerce_OrderHeader">
+
+    <id name="OrderHeaderID" type="Int64" unsaved-value="0">
+      <column name="orderHeaderID" sql-type="bigint" not-null="true" unique="true"/>
+      <generator class="native" />
+    </id>
+
+    <property column="purchaseOrderNumber" type="String" name="_PurchaseOrderNumber" not-null="true" length="50" />
+    <property column="orderStatusID" type="short" name="_OrderStatusID" not-null="true" />
+    <property column="paymentMethodID" type="short" name="_PaymentMethodID" not-null="true" />
+    <property column="orderedDate" type="DateTime" name="_OrderedDate" not-null="true" />
+   
+		<many-to-one name="_InvoiceAddress" column="invoiceAddressID" class="Address" />
+		<many-to-one name="_DeliveryAddress" column="deliveryAddressID" class="Address" />
+		<many-to-one name="_DeliveryTypeid" column="deliveryTypeID" class="DeliveryType" />
+    
+		<property column="comment" type="String" name="_Comment" length="512" />
+		<property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
+		<property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
+		
+	</class>
+</hibernate-mapping>

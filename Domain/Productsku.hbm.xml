@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.0" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+
+<class name="Productsku" table="Ecommerce_ProductSKU" lazy="true">
+
+		<id name="_Sku" column="sku" type="String">
+			<generator class="assigned"/>
+		</id>
+		<many-to-one name="_Productid" column="productID" class="Product" />
+		<property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
+		<property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
+		
+	</class>
+</hibernate-mapping>
