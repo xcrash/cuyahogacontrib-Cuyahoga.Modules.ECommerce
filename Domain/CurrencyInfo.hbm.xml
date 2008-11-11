@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+
+  <class name="CurrencyInfo" table="Ecommerce_Currency" lazy="true">
+
+		<id name="_CurrencyCode" column="currencyCode" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="exchangeRate" type="Decimal" name="_ExchangeRate" not-null="true" />
+		<property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
+		<property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
+		
+	</class>
+</hibernate-mapping>
