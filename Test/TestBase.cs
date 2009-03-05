@@ -40,7 +40,9 @@ namespace Cuyahoga.Modules.ECommerce.Test {
         }
 
         protected ECommerceModule CreateModule() {
-            return new ECommerceModule(
+            return null;
+                
+                /*new ECommerceModule(
                         ServiceFactory.GetService(typeof(ICommerceService)) as ICommerceService,
                         ServiceFactory.GetService(typeof(ICatalogueViewService)) as ICatalogueViewService,
                         ServiceFactory.GetService(typeof(ICommerceDao)) as ICommerceDao,
@@ -52,8 +54,8 @@ namespace Cuyahoga.Modules.ECommerce.Test {
                         ServiceFactory.GetService(typeof(IOrderService)) as IOrderService,
                         ServiceFactory.GetService(typeof(IEmailSender)) as IEmailSender,
                         ServiceFactory.GetService(typeof(IDeliveryService)) as IDeliveryService,
-                        ServiceFactory.GetService(typeof(ICultureService)) as ICultureService
-                    );
+                        ServiceFactory.GetService(typeof(ICultureService)) as ICultureService,
+                    );*/
         }
     }
 }

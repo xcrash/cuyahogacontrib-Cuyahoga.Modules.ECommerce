@@ -104,11 +104,11 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
             ICategoryView nodeView = null;
             
             if (CatID != CATEGORY_ID_NEW) {
-                nodeView = controller.CatalogueViewer.GetCategoryView(1, "en-GB", CatID);
+                nodeView = controller.CatalogueViewer.GetCategoryView(1, "en-GB", CatID);  //hack
                 cat = nodeView.CurrentNode;
             } else {
                 if (!IsPostBack) {
-                    nodeView = controller.CatalogueViewer.GetCategoryView(1, "en-GB", ParentNodeID);
+                    nodeView = controller.CatalogueViewer.GetCategoryView(1, "en-GB", ParentNodeID);//hack
                     ctlBreadCrumb.SetLinkOnCurrentNode = true;
                     ctlBreadCrumb.RenderBreadCrumbTrail(nodeView.BreadCrumbTrail);
                 }
@@ -202,11 +202,11 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
             Category newCategory;
 
             if (CatID != CATEGORY_ID_NEW) {
-                newCategory = controller.CatalogueViewer.GetCategory(1, "en-GB", CatID);
+                newCategory = controller.CatalogueViewer.GetCategory(1, "en-GB", CatID);//hack
             } else {
                 newCategory = new Category();
                 newCategory.IsPublished = true;
-                newCategory.ParentCategory = controller.CatalogueViewer.GetCategory(1, "en-GB", ParentNodeID);
+                newCategory.ParentCategory = controller.CatalogueViewer.GetCategory(1, "en-GB", ParentNodeID);//hack
             }
 
             newCategory.CategoryDescription = fckDescription.Value;
@@ -223,11 +223,11 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
                ScaledPriceProcessor priceScaler = new ScaledPriceProcessor();
 
             if(changeBY > 0){
-               ICategoryView view =  controller.CatalogueViewer.GetCategoryView(1, "en-GB", CatID);
+                ICategoryView view = controller.CatalogueViewer.GetCategoryView(1, "en-GB", CatID);//hack
                if (view.ProductList.Count == 0) {
                    ICategoryView subView;
                    foreach (ICategory node in view.ChildNodes) {
-                       subView = controller.CatalogueViewer.GetCategoryView(1, "en-GB", node.NodeID);
+                       subView = controller.CatalogueViewer.GetCategoryView(1, "en-GB", node.NodeID);//hack
                        List<IProductSummary> productList = subView.ProductList;
                        foreach (IProductSummary p in productList) {
                            priceScaler.SaveProductPriceChange(p.ProductID, priceScaler.GenerateScaledPrice(changeBY, p.Price));
@@ -241,20 +241,11 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
                    }
                }
             }
-         
-
-             // newCategory.PriceChangePercent = Convert.ToDecimal(txtPriceChangePercent.Text);
-
-
 
             if (wim.ImageHeight != null && wim.WebImagePath != null) {
                 newCategory.Height = Convert.ToInt16(wim.ImageHeight);
                 newCategory.Width = Convert.ToInt16(wim.ImageWidth);
                 newCategory.Url = WebHelper.GetImageUrl(wim.WebImagePath);
-            }
-
-            if (wimKitImage.ImageHeight != null && wimKitImage.WebImagePath != null) {
-                newCategory.KitPicture = WebHelper.GetImageUrl(wimKitImage.WebImagePath);
             }
 
             return newCategory;

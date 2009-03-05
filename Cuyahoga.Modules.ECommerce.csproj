@@ -104,13 +104,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\Castle.Windsor.dll</HintPath>
     </Reference>
-    <Reference Include="CustomWebControls, Version=1.0.1865.20936, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\CustomWebControls.dll</HintPath>
-    </Reference>
     <Reference Include="FredCK.FCKeditorV2, Version=2.2.2106.29420, Culture=neutral, PublicKeyToken=4f86767c9b519a06">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Igentics.Common.Logging, Version=2.1.0.0, Culture=neutral, PublicKeyToken=923212a2cbd0325a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Igentics.Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Igentics.Common.Util, Version=2.1.0.0, Culture=neutral, PublicKeyToken=923212a2cbd0325a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Igentics.Common.Util.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -123,6 +127,10 @@
     <Reference Include="NHibernate, Version=1.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.1.4.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="NVelocity, Version=0.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc">
       <SpecificVersion>False</SpecificVersion>
@@ -161,6 +169,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Test\app.config" />
+    <None Include="Test\Config\facilities.config" />
+    <None Include="Test\Config\properties.config" />
+    <None Include="Test\Config\services.config" />
     <None Include="UI\WebImageMaker\WebImageMakerHandler.ashx" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -199,9 +211,17 @@
     <Compile Include="Domain\Document.cs" />
     <Compile Include="Domain\DocumentType.cs" />
     <Compile Include="Domain\ProductDocument.cs" />
+    <Compile Include="Messages\BasketRequest.cs" />
+    <Compile Include="Messages\CatalogueNodeView.cs" />
+    <Compile Include="Messages\MessageManager.cs" />
+    <Compile Include="Messages\ProductView.cs" />
     <Compile Include="Service\AuthenticationService.cs" />
     <Compile Include="Service\CachedCatalogueViewService.cs" />
     <Compile Include="Service\Interfaces\IAuthenticationService.cs" />
+    <Compile Include="Test\CatalogueViewTests.cs" />
+    <Compile Include="Test\ECommerceTests.cs" />
+    <Compile Include="Test\MoneyTest.cs" />
+    <Compile Include="Test\TestBase.cs" />
     <Compile Include="Util\Interfaces\IWebStoreUser.cs" />
     <Compile Include="Util\User\WebStoreUser.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -956,6 +976,7 @@
     <EmbeddedResource Include="Domain\CountryDeliveryWeight.hbm.xml" />
     <Content Include="Install\Database\mssql2000\install.sql" />
     <Content Include="Install\Database\mssql2000\uninstall.sql" />
+    <Content Include="Test\Cuyahoga.Modules.ECommerce.Test.csproj" />
     <Content Include="UI\WebImageMaker\WebImageMaker.css" />
     <Content Include="UI\WebImageMaker\WebImageMaker_canvas.js" />
     <Content Include="UI\WebImageMaker\WebImageMaker_normal.js" />
@@ -1026,6 +1047,7 @@
     <Content Include="Web\Admin\Controls\PriceChanger.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
+    <Content Include="Web\Admin\Controls\Search.ascx" />
     <Content Include="Web\Admin\Controls\SKUEditor.ascx" />
     <Content Include="Web\Admin\Controls\SynonymEditor.ascx">
       <SubType>ASPXCodeBehind</SubType>
@@ -1072,7 +1094,9 @@
     </Content>
     <Content Include="Web\Admin\Catalogue\Download.aspx" />
     <Content Include="Web\Admin\ImageManager.aspx" />
-    <Content Include="Web\Admin\Images\abf-icons.gif" />
+    <Content Include="Web\Admin\Images\Account.JPG" />
+    <Content Include="Web\Admin\Images\cat.JPG" />
+    <Content Include="Web\Admin\Images\Orders.JPG" />
     <Content Include="Web\Admin\Js\tabpane.js" />
     <Content Include="Web\Admin\Catalogue\NewCsvImport.aspx" />
     <Content Include="Web\Admin\OrderManager.aspx">
@@ -1099,6 +1123,7 @@
     <Content Include="Web\Admin\PaymentManager.aspx" />
     <Content Include="Web\Admin\Payment\PaymentMethodEdit.aspx" />
     <Content Include="Web\Admin\Payment\PaymentMethodList.aspx" />
+    <Content Include="Web\Admin\PromotionAdd.aspx" />
     <Content Include="Web\Admin\PromotionManager.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -1137,6 +1162,8 @@
     <Content Include="Web\Images\basket_go.png" />
     <Content Include="Web\Images\basket_put.png" />
     <Content Include="Web\Images\basket_remove.png" />
+    <Content Include="Web\Images\best_selling_img04.jpg" />
+    <Content Include="Web\Images\blackberry8100_1.jpg" />
     <Content Include="Web\Images\cart.png" />
     <Content Include="Web\Images\cart_add.png" />
     <Content Include="Web\Images\cart_delete.png" />
@@ -1145,6 +1172,10 @@
     <Content Include="Web\Images\cart_go.png" />
     <Content Include="Web\Images\cart_put.png" />
     <Content Include="Web\Images\cart_remove.png" />
+    <Content Include="Web\Images\folder_delete.png" />
+    <Content Include="Web\Images\folder_edit.png" />
+    <Content Include="Web\Images\head_background.gif" />
+    <Content Include="Web\Images\home_main_callout.jpg" />
     <Content Include="Web\Views\Account.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -1341,6 +1372,7 @@
     <Folder Include="EmailTemplates\" />
     <Folder Include="Install\Database\mysql\" />
     <Folder Include="Install\Database\postgresql\" />
+    <Folder Include="Test\Properties\" />
     <Folder Include="Web\Admin\Delivery\DistanceBased\" />
     <Folder Include="Web\Admin\Promotions\" />
     <Folder Include="Web\Admin\Reports\" />
@@ -1354,6 +1386,7 @@
 set MOD_PATH=Modules\ECommerce
 set MOD_ADMIN_PATH=Modules\ECommerce\Admin
 set MOD_ADMIN_CONTROL_PATH=Modules\ECommerce\Admin\controls
+set MOD_ADMIN_IMAGE_PATH=Modules\ECommerce\Admin\Images
 
 xcopy /y /r /d "$(TargetDir)$(TargetName).dll" "%25CUY_DIR%25\bin"
 xcopy /y /r /d "$(TargetDir)$(TargetName).pdb" "%25CUY_DIR%25\bin"
@@ -1361,6 +1394,8 @@ xcopy /s /y /r /d "$(ProjectDir)web\views\*.as?x" "%25CUY_DIR%25\%25MOD_PATH%25\
 xcopy /s /y /r /d "$(ProjectDir)web\*.aspx" "%25CUY_DIR%25\%25MOD_PATH%25"
 xcopy /s /y /r /d "$(ProjectDir)web\admin\*.as?x" "%25CUY_DIR%25\%25MOD_ADMIN_PATH%25"
 xcopy /s /y /r /d "$(ProjectDir)web\admin\controls\*.as?x" "%25CUY_DIR%25\%25MOD_ADMIN_CONTROL_PATH%25"
+xcopy /s /y /r /d "$(ProjectDir)web\admin\images\*.*" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25"
+
 copy /y "$(ProjectDir)web\Controls\resources\Strings.resx" "%25CUY_DIR%25\Resources\$(TargetName).resx"
 
 xcopy /s /y /r /d "$(ProjectDir)web\controls\*.as?x" "%25CUY_DIR%25\%25MOD_PATH%25\controls\"
@@ -1369,7 +1404,6 @@ xcopy /s /y /r /d "$(ProjectDir)web\images\*.gif" "%25CUY_DIR%25\%25MOD_PATH%25\
 xcopy /s /y /r /d "$(ProjectDir)web\images\*.jpg" "%25CUY_DIR%25\%25MOD_PATH%25\Images\"
 xcopy /s /y /r /d "$(ProjectDir)web\admin\Css\*.css" "%25CUY_DIR%25\%25MOD_PATH%25\Admin\css\"
 xcopy /s /y /r /d "$(ProjectDir)web\admin\Js\*.js" "%25CUY_DIR%25\%25MOD_PATH%25\Admin\js\"
-xcopy /s /y /r /d "$(ProjectDir)web\admin\Images\*.*" "%25CUY_DIR%25\%25MOD_PATH%25\Admin\images\"
 xcopy /s /y /r /d "$(ProjectDir)Install\*.*" "%25CUY_DIR%25\%25MOD_PATH%25\Install\"</PostBuildEvent>
   </PropertyGroup>
 </Project>

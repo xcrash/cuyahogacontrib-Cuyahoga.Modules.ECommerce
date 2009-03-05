@@ -6,8 +6,8 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("MHHire")]
-[assembly: AssemblyDescription("MJHire verison of ECommerce module for cuyahoga")]
+[assembly: AssemblyTitle("Cuyahoga.Modules.ECommerce")]
+[assembly: AssemblyDescription("Open Source verison of ECommerce module for cuyahoga")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Igentics")]
 [assembly: AssemblyProduct("")]
