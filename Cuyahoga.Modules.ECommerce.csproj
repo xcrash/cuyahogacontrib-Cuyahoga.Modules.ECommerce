@@ -429,17 +429,6 @@
     <Compile Include="Web\Admin\Controls\UpSellEditor.ascx.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Web\Admin\Catalogue\CSVExport.aspx.cs">
-      <DependentUpon>CSVExport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Web\Admin\Catalogue\CSVImport.aspx.cs">
-      <DependentUpon>CSVImport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Web\Admin\Catalogue\CSVImport.aspx.designer.cs">
-      <DependentUpon>CSVImport.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Web\Admin\Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -521,13 +510,6 @@
     </Compile>
     <Compile Include="Web\Admin\ImageManager.aspx.designer.cs">
       <DependentUpon>ImageManager.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Web\Admin\Catalogue\NewCsvImport.aspx.cs">
-      <DependentUpon>NewCsvImport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Web\Admin\Catalogue\NewCsvImport.aspx.designer.cs">
-      <DependentUpon>NewCsvImport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web\Admin\OrderManager.aspx.cs">
       <DependentUpon>OrderManager.aspx</DependentUpon>
@@ -1044,12 +1026,6 @@
     </Content>
     <Content Include="Web\Admin\Controls\UpSellEditor.ascx" />
     <Content Include="Web\Admin\Css\tab.webfx.css" />
-    <Content Include="Web\Admin\Catalogue\CSVExport.aspx">
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Web\Admin\Catalogue\CSVImport.aspx">
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
     <Content Include="Web\Admin\Default.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -1088,7 +1064,6 @@
     <Content Include="Web\Admin\Images\cat.JPG" />
     <Content Include="Web\Admin\Images\Orders.JPG" />
     <Content Include="Web\Admin\Js\tabpane.js" />
-    <Content Include="Web\Admin\Catalogue\NewCsvImport.aspx" />
     <Content Include="Web\Admin\OrderManager.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>

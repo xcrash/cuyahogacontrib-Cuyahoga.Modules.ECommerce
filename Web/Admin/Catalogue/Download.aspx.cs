@@ -34,7 +34,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
                   Response.ContentType = "Application/x-csv";
                   Response.AddHeader("content-disposition", "attachment; filename=export.csv");
 
-                  FileStream sourceFile = new FileStream(ConfigurationSettings.AppSettings["CSVExportPath"] + FileName, FileMode.Open);
+                  FileStream sourceFile = new FileStream(ConfigurationManager.AppSettings["CSVExportPath"] + FileName, FileMode.Open);
                   long FileSize;
                   FileSize = sourceFile.Length;
                   byte[] getContent = new byte[(int)FileSize];

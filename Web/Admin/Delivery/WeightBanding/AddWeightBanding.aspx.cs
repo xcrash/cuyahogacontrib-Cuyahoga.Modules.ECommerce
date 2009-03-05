@@ -14,7 +14,7 @@ using Cuyahoga.Modules.ECommerce.Domain.Catalogue.Interfaces;
 using Cuyahoga.Modules.ECommerce;
 using Cuyahoga.Modules.ECommerce.Domain;
 using System.Collections.Generic;
-
+using Igentics.Common.Logging;
 using Cuyahoga.Modules.ECommerce.Core;
 
 namespace Cuyahoga.Modules.ECommerce.Web.Admin.Delivery.WeightBanding {
@@ -75,6 +75,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin.Delivery.WeightBanding {
                 lblMessage.Text = "Your new weight band has been saved";
                 plhAdd.Visible = false;
             } catch (Exception ex) {
+                LogManager.GetLogger(GetType()).Error(ex);
                 lblMessage.Text = "Your new weight band has NOT been saved. This is probably because the weight level you entered already exsists for this market.";
             }
 

@@ -14,7 +14,7 @@ using Cuyahoga.Modules.ECommerce.Domain;
 using Cuyahoga.Modules.ECommerce.Domain.Catalogue;
 using System.Collections.Generic;
 using Cuyahoga.Modules.ECommerce.Core;
-
+using Igentics.Common.Logging;
 namespace Cuyahoga.Modules.ECommerce.Web.Admin.Controls {
     public partial class UpSellEditor : LocalizedModuleConsumerControl {
 
@@ -142,6 +142,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin.Controls {
                 }
 
             } catch (Exception ex) {
+                LogManager.GetLogger(GetType()).Error(ex);
                 args.IsValid = false;
             }
         }

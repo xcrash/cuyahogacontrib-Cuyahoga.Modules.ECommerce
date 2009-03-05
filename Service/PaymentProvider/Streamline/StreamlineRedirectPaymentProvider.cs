@@ -456,9 +456,7 @@ namespace Cuyahoga.Modules.ECommerce.Service.PaymentProvider.Streamline {
 
 				XmlElement shippingAddress = XMLUtils.AppendElement(order, "shippingAddress");
 				XmlElement address = XMLUtils.AppendElement(shippingAddress, "address");
-
-				string sp = " ";
-				
+	
 				XMLUtils.AppendElement(address, "firstName", payment.UserInfo.UserDetails.FirstName);
                 XMLUtils.AppendElement(address, "lastName", payment.UserInfo.UserDetails.LastName);
 

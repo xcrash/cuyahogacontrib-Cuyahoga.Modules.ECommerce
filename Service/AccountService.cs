@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using Igentics.Common.Logging;
 using Castle.Facilities.NHibernateIntegration;
 
 using Cuyahoga.Core;
@@ -48,7 +48,8 @@ namespace Cuyahoga.Modules.ECommerce.Service {
             try {
                 this._sessionManager.OpenSession().SaveOrUpdate(ud);
                 this._sessionManager.OpenSession().Flush();
-            } catch (Exception e) {
+            } catch (Exception ex) {
+                LogManager.GetLogger(GetType()).Error(ex);
                 return false;
             }
             return true;

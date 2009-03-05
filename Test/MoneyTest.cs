@@ -113,7 +113,7 @@ namespace Cuyahoga.Modules.ECommerce.Test {
 
             string c1 = m.ToString();
             string c2 = m.ToString(false);
-            string c3 = "";
+    
             //m.Currency.CurrencyCode;
         }
 	}

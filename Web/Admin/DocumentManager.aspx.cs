@@ -62,7 +62,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
         public void Upload_Click(object sender, System.EventArgs e) {
             if (ValidateUpload()) {
                 try {
-                    uploadControl.SaveAs(ConfigurationSettings.AppSettings["DocumentUploadPath"] + uploadControl.PostedFile.FileName);
+                    uploadControl.SaveAs(ConfigurationManager.AppSettings["DocumentUploadPath"] + uploadControl.PostedFile.FileName);
                     Document d = new Document();
                     d.DocumentName = uploadControl.PostedFile.FileName;
                     d.FilePath =  uploadControl.PostedFile.FileName;
@@ -88,7 +88,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
 
         public bool ValidateUpload(){
             return (uploadControl != null && uploadControl.HasFile 
-                && !File.Exists(ConfigurationSettings.AppSettings["DocumentUploadPath"] + uploadControl.PostedFile.FileName) && ValidFileType());
+                && !File.Exists(ConfigurationManager.AppSettings["DocumentUploadPath"] + uploadControl.PostedFile.FileName) && ValidFileType());
         }
 
         public bool ValidFileType() { //should define some kind of enum || define in db/web.config FIXME
@@ -98,7 +98,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
         }
 
         public bool CheckFileSize() {
-            if (uploadControl.PostedFile.ContentLength < Convert.ToInt32(ConfigurationSettings.AppSettings["MaximumUploadSize"])) {
+            if (uploadControl.PostedFile.ContentLength < Convert.ToInt32(ConfigurationManager.AppSettings["MaximumUploadSize"])) {
                 return true;
             }
 

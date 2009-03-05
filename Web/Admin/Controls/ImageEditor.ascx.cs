@@ -27,7 +27,7 @@ using Cuyahoga.Modules.ECommerce.Domain.Catalogue;
 using Guild.WebControls;
 using Cuyahoga.Modules.ECommerce.Util;
 using Cuyahoga.Modules.ECommerce.Util.Enums;
-
+using Igentics.Common.Logging;
 namespace Cuyahoga.Modules.ECommerce.Web.Admin.Controls {
 
     public class WebImageMakerAdapter : Domain.Catalogue.Image {
@@ -252,7 +252,9 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin.Controls {
 
                         AdditionalLargeImageType = Convert.ToString(ImageType.Large);
                         
-                    } catch (Exception ex) {}
+                    } catch (Exception ex) {
+                        LogManager.GetLogger(GetType()).Error(ex);
+                    }
                 }
             }
             
@@ -399,7 +401,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin.Controls {
         private int MaxProductImages {
             get {
                 try {
-                    return Convert.ToInt32(ConfigurationSettings.AppSettings["MaxProductImages"]);
+                    return Convert.ToInt32(ConfigurationManager.AppSettings["MaxProductImages"]);
                 } catch {
                     return 1;
                 }
