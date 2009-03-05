@@ -1385,8 +1385,8 @@
     <PostBuildEvent>set CUY_DIR=C:\SourceForge\LeeCommerce\Web
 set MOD_PATH=Modules\ECommerce
 set MOD_ADMIN_PATH=Modules\ECommerce\Admin
-set MOD_ADMIN_CONTROL_PATH=Modules\ECommerce\Admin\controls
-set MOD_ADMIN_IMAGE_PATH=Modules\ECommerce\Admin\Images
+set MOD_ADMIN_CONTROL_PATH=Modules\ECommerce\Admin\controls\
+set MOD_ADMIN_IMAGE_PATH=Modules\ECommerce\Admin\Images\
 
 xcopy /y /r /d "$(TargetDir)$(TargetName).dll" "%25CUY_DIR%25\bin"
 xcopy /y /r /d "$(TargetDir)$(TargetName).pdb" "%25CUY_DIR%25\bin"
@@ -1394,7 +1394,9 @@ xcopy /s /y /r /d "$(ProjectDir)web\views\*.as?x" "%25CUY_DIR%25\%25MOD_PATH%25\
 xcopy /s /y /r /d "$(ProjectDir)web\*.aspx" "%25CUY_DIR%25\%25MOD_PATH%25"
 xcopy /s /y /r /d "$(ProjectDir)web\admin\*.as?x" "%25CUY_DIR%25\%25MOD_ADMIN_PATH%25"
 xcopy /s /y /r /d "$(ProjectDir)web\admin\controls\*.as?x" "%25CUY_DIR%25\%25MOD_ADMIN_CONTROL_PATH%25"
-xcopy /s /y /r /d "$(ProjectDir)web\admin\images\*.*" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25"
+xcopy /s /y /r /d "$(ProjectDir)web\admin\images\*.png" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25"
+xcopy /s /y /r /d "$(ProjectDir)web\admin\images\*.gif" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25"
+xcopy /s /y /r /d "$(ProjectDir)web\admin\images\*.JPG" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25"
 
 copy /y "$(ProjectDir)web\Controls\resources\Strings.resx" "%25CUY_DIR%25\Resources\$(TargetName).resx"
 
