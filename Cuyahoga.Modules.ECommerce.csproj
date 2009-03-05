@@ -1190,7 +1190,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Controls\BreadCrumbTrail.ascx">
-      <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Controls\MenuTabs.ascx">
       <SubType>ASPXCodeBehind</SubType>
