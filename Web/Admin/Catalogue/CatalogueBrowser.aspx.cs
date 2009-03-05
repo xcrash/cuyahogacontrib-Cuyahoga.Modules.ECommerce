@@ -120,15 +120,11 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
 
                 ParentID = cat.CurrentNode.ParentNodeID;
 
-                if (ShowAddCategory) {
-                    rptCategories.DataSource = categoryList;
-                    rptCategories.DataBind();
-                }
+                rptCategories.DataSource = categoryList;
+                rptCategories.DataBind();
 
-                if (ShowAddProduct) {
-                    rptProducts.DataSource = productList;
-                    rptProducts.DataBind();
-                }
+                rptProducts.DataSource = productList;
+                rptProducts.DataBind();
 
                 ctlBreadCrumb.RenderBreadCrumbTrail(cat.BreadCrumbTrail);
             }
