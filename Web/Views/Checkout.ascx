@@ -56,11 +56,11 @@
 </asp:placeholder>
 <asp:placeholder id="phStep3a" runat="server">
  
-  <p class="checkout">Thank you for your order. Your order details have been submitted to Albion.</p>
+  <p class="checkout">Thank you for your order. Your order details have been submitted to leeCommerce.</p>
 </asp:placeholder>
 <asp:placeholder id="phStep3b" runat="server">
  
-  <p class="checkout">Thank you for your order. Your order details have been submitted to Albion. Please check order details and proceed to pay.</p>
+  <p class="checkout">Thank you for your order. Your order details have been submitted to leeCommerce. Please check order details and proceed to pay.</p>
   <ecommerce:orderviewcomposite runat="server" id="ctlOrderViewComposite" />  
 </asp:placeholder>
 <div class="clear"></div>

@@ -1,4 +1,4 @@
-<%@ Control Language="c#" AutoEventWireup="false" Codebehind="OrderList.ascx.cs" Inherits="Cuyahoga.Modules.ECommerce.Albion.Views.OrderList" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
+<%@ Control Language="c#" AutoEventWireup="false" Codebehind="OrderList.ascx.cs" Inherits="Cuyahoga.Modules.ECommerce.Views.OrderList" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <%@ Register TagPrefix="ecommerce" TagName="Address" Src="Controls/AddressEdit.ascx" %>
 <%@ Register TagPrefix="ecommerce" TagName="User" Src="Controls/UserDetailsEdit.ascx" %>
 <%@ Register TagPrefix="ecommerce" TagName="OrderViewComposite" Src="Controls/OrderViewComposite.ascx" %>

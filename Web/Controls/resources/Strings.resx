@@ -1075,55 +1075,16 @@
     <value>Account</value>
   </data>
   <data name="order_confirmation_subject" xml:space="preserve">
-    <value>Albion order confirmation</value>
+    <value>leeCommerce order confirmation</value>
   </data>
   <data name="order_confirmation_account_email_finishtext" xml:space="preserve">
-    <value>&lt;p&gt; A member of the Albion sales team will contact you within the next 48 hours to confirm your order, payment and delivery details. If you have any questions in the meantime, please contact the sales helpline on 01767 692313 ext 1 (Monday to Friday 8.30 – 5.30), or email
-          sales@albion-manufactiring.com.&lt;/p&gt;
-          
-           &lt;p&gt;If you have any comments or questions about our online ordering system, Albion would like to hear from you.&lt;/p&gt;
-          
-           &lt;p&gt;Thank you for using Albion ecommerce ordering. We look forward to being of further assistance in the future.&lt;/p&gt;
-          
-          &lt;p&gt; Yours sincerely&lt;/p&gt;
-          
-          &lt;p&gt; Albion Sales Department&lt;/p&gt;
-          
-           &lt;p&gt;Important: This email address was supplied by the purchaser and has been added to our email database. If you wish the address to be removed so that you no longer receive information on offers and new products, please send an email requesting this to sales@albion-manufacturing.com.&lt;/p&gt;</value>
+    <value>order confirmation text</value>
   </data>
   <data name="order_confirmation_credit_card_email_finishtext" xml:space="preserve">
-    <value>&lt;p&gt; A member of the Albion sales team will contact you within the next 48 hours to confirm your order, payment and delivery details. If you have any questions in the meantime, please contact the sales helpline on 01767 692313 ext 1 (Monday to Friday 8.30 – 5.30), or email
-        sales@albion-manufactiring.com.&lt;/p&gt;
-        
-       &lt;p&gt; Albion offers an exclusive Account Holder facility to customers who wish to place frequent orders using on our online system. Account Holders receive a number of extra benefits, including:&lt;/p&gt;
-        &lt;ul&gt;
-        &lt;li&gt;	&lt;h4&gt;Quick and easy online ordering with no need to input payment details &lt;/h4&gt;
-        Orders will be processed by the sales team and verified via telephone or email. Invoices will be sent to Account Holders upon order confirmation.&lt;/li&gt;
-         &lt;li&gt;	&lt;h4&gt;Online account recognition &lt;/h4&gt;
-        The site will recognise your account when you enter your user name and password, so you won’t have to input your details time and time again.&lt;/li&gt;
-         &lt;li&gt;	&lt;h4&gt;Receive your trade discount online&lt;/h4&gt;
-        Your usual discount will be applied to all orders after they have been placed. Price and delivery information will be verified by phone. &lt;/li&gt;
-         &lt;li&gt;	&lt;h4&gt;Exclusive Account Holders Loyalty Scheme   &lt;/h4&gt;
-        Keep abreast of new products, special offers and discounts by joining our new online programme for Account Holders.&lt;/li&gt;
-        &lt;/ul&gt;
-       &lt;p&gt; To become an Account Holder*, contact the sale team on 01767 692313 ext 1, or email sales@albion-manufacturing.com. &lt;/p&gt;
-        
-       &lt;p&gt; If you have any comments or questions about our online ordering system, Albion would like to hear from you. &lt;/p&gt;
-        
-       &lt;p&gt; Thank you for using Albion ecommerce ordering. We look forward to being of further assistance in the future.&lt;/p&gt;
-        
-       &lt;p&gt; Yours sincerely&lt;/p&gt;
-        
-       &lt;p&gt; Albion Sales Department&lt;/p&gt;
-        
-       &lt;p&gt; *Please note:
-        Applicants to become Account Holders will be asked to provide company details and financial accounts to verify their status. &lt;/p&gt;
-        
-       &lt;p&gt; Important: This email address was supplied by the purchaser and has been added to our email database. If you wish the address to be removed so that you no longer receive information on offers and new products, please send an email requesting this to sales@albion-manufacturing.com.&lt;/p&gt;</value>
+    <value>&lt;p&gt; some text</value>
   </data>
   <data name="order_confirmation_preamble" xml:space="preserve">
-    <value>&lt;p&gt;Welcome to Albion Design &amp; Fabrication Ltd online.&lt;/p&gt;
-          &lt;p&gt;We have received your order and are very pleased you have decided to purchase products from our range. Please check that the following order particulars are correct:&lt;/p&gt;</value>
+    <value>preamble;</value>
   </data>
   <data name="itemnotstocked" xml:space="preserve">
     <value>This item is not currently in stock</value>

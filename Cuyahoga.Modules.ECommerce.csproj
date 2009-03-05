@@ -419,10 +419,6 @@
     <Compile Include="Web\Admin\Controls\NewAccounts.ascx.designer.cs">
       <DependentUpon>NewAccounts.ascx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Web\Admin\Controls\PriceChanger.ascx.cs">
-      <DependentUpon>PriceChanger.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Web\Admin\Controls\SKUEditor.ascx.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -608,10 +604,6 @@
     </Compile>
     <Compile Include="Web\Admin\PromotionManager.aspx.designer.cs">
       <DependentUpon>PromotionManager.aspx.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Web\Controls\AlbionMenu.ascx.cs">
-      <DependentUpon>AlbionMenu.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Web\Controls\Attributes.ascx.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -1045,9 +1037,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Admin\Controls\NewAccounts.ascx" />
-    <Content Include="Web\Admin\Controls\PriceChanger.ascx">
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
     <Content Include="Web\Admin\Controls\Search.ascx" />
     <Content Include="Web\Admin\Controls\SKUEditor.ascx" />
     <Content Include="Web\Admin\Controls\SynonymEditor.ascx">
@@ -1129,9 +1118,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\CcPostBack.aspx">
-    </Content>
-    <Content Include="Web\Controls\AlbionMenu.ascx">
-      <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Controls\Attributes.ascx">
       <SubType>ASPXCodeBehind</SubType>
