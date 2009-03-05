@@ -33,25 +33,7 @@
 
     <property name="copy-cuyahoga-module.destination.path" value="${copy-cuyahoga-modules.destination.path}"/>
 
-    <!-- Extended Articles -->
-    <property name="copy-cuyahoga-module.source.path" value="${working.path}\..\..\..\Cuyahoga\V1.5.2\Modules\ExtendedArticles\trunk\src"/>
-    <property name="copy-cuyahoga-module.module.name" value="ExtendedArticles"/>
-    <call target="copy-cuyahoga-module"/>
 
-    <!-- Feedback -->
-    <property name="copy-cuyahoga-module.source.path" value="${working.path}"/>
-    <property name="copy-cuyahoga-module.module.name" value="ECommerce"/>
-    <call target="copy-cuyahoga-module"/>
-
-    <!-- Gallery -->
-    <property name="copy-cuyahoga-module.source.path" value="${working.path}\..\..\..\Cuyahoga\V1.5.2\Modules\Gallery\trunk\src"/>
-    <property name="copy-cuyahoga-module.module.name" value="Gallery"/>
-    <call target="copy-cuyahoga-module"/>
-
-    <!-- Custom -->
-    <property name="copy-cuyahoga-module.source.path" value="${working.path}\..\..\..\Cuyahoga\V1.5.2\Modules\Custom\trunk\src"/>
-    <property name="copy-cuyahoga-module.module.name" value="Custom"/>
-    <call target="copy-cuyahoga-module"/>
 
   </target>
 
