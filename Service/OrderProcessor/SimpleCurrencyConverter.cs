@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Text;
 using Igentics.Common.ECommerce.DataTransferObjects;
 using Igentics.Common.ECommerce;
-
+using Cuyahoga.Modules.ECommerce.Service.OrderProcessor;
+using Cuyahoga.Modules.ECommerce.Util.Interfaces;
 namespace Igentics.Soa.Commerce.Core.Service.OrderProcessor {
 
     public class SimpleCurrencyConverter : IOrderProcessor {
@@ -20,7 +21,7 @@ namespace Igentics.Soa.Commerce.Core.Service.OrderProcessor {
             }
         }
 
-        public ProcessStatusMessage Process(Basket order) {
+        public ProcessStatusMessage Process(IBasket order) {
 
             if (order == null) return new ProcessStatusMessage(ProcessStatus.Error, "Null Order");
 

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using Igentics.Common.ECommerce;
 using Igentics.Common.ECommerce.DataTransferObjects;
-
+using Cuyahoga.Modules.ECommerce.Service.OrderProcessor;
 namespace Igentics.Soa.Commerce.Core.Service.OrderProcessor {
 
 	/// <summary>

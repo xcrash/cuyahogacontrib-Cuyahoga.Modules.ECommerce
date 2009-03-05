@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using System.Collections;
 using Igentics.Common.ECommerce;
 using Igentics.Common.ECommerce.DataTransferObjects;
-using Igentics.Soa.Commerce.Core.Util.Enums;
-
+using Cuyahoga.Modules.ECommerce.Service.OrderProcessor;
+using Cuyahoga.Modules.ECommerce.Util.Interfaces;
 namespace Igentics.Soa.Commerce.Core.Service.OrderProcessor {
 
     /// <summary>
@@ -14,7 +14,7 @@ namespace Igentics.Soa.Commerce.Core.Service.OrderProcessor {
         public SubTotalCalculator() {
         }
 
-        public ProcessStatusMessage Process(Basket basket) {
+        public ProcessStatusMessage Process(IBasket basket) {
 
             basket.SubTotal = new Money(basket.CurrencyCode, 0M);
 

@@ -4,8 +4,9 @@ using System.Collections;
 using System.Collections.Specialized;
 using Igentics.Common.ECommerce;
 using Igentics.Common.ECommerce.DataTransferObjects;
-using Igentics.Soa.Commerce.Core.Util.Enums;
-
+using Cuyahoga.Modules.ECommerce.Service.OrderProcessor;
+using Cuyahoga.Modules.ECommerce.Util;
+using Cuyahoga.Modules.ECommerce.Util.Interfaces;
 namespace Igentics.Soa.Commerce.Core.Service.OrderProcessor {
 
     public interface IBandedItem {
@@ -79,7 +80,7 @@ namespace Igentics.Soa.Commerce.Core.Service.OrderProcessor {
 
         #region IOrderProcessor Members
 
-        public ProcessStatusMessage Process(Basket order) {
+        public ProcessStatusMessage Process(IBasket order) {
 
             if (order.SubTotal != null) {
 

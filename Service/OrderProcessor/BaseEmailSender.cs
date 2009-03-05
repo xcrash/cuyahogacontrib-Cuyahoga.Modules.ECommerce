@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Mail;
 using System.Text;
-
-using Igentics.Common.Service.EmailTransport;
-using Igentics.Common.Service.Templates;
-using Igentics.Common.Service.Translation;
+using Cuyahoga.Modules.ECommerce.Service.OrderProcessor;
+using Cuyahoga.Modules.ECommerce.Service.Email;
+using Cuyahoga.Modules.ECommerce.Service.Translation;
 
 using Igentics.Common.ECommerce;
 using Igentics.Common.ECommerce.DataTransferObjects;
