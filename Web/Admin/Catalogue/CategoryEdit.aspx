@@ -96,46 +96,6 @@
                     </table>
 				</div>				
             </div>
-
-			<div class="tabbertab">             
-				<h2>Kits</h2>
-				<div class="post">
-				    <table>
-                        <tr>
-                            <td><asp:Label ID="lblKitDescription" runat="server" Text="Kit Description"></asp:Label></td>
-                            <td>
-                                <asp:TextBox ID="txtKitDescription" runat="server" Columns="60" />
-                            </td>
-                        </tr>
-                        <tr>
-            	            <td><asp:Label ID="lblKitImage" runat="server" Text="Kit Image"></asp:Label></td>
- 		                    <td>
- 		                       <guild:WebImageMaker id="wimKitImage" runat="server" 
-                                    CancelButtonText="Cancel" ConfirmButtonText="OK" UploadButtonText="Upload" 
-                                    ImageWidth="130" ImageHeight="100"
-                                    ImageUrl="<%#kitImageUrl %>"
-                                    Format="jpg" Quality="Medium" HandlerPath="~/WebImageMakerHandler.ashx"  />
-         		            </td>
-                        </tr>
-                    </table>
-                    <table class="tbl">
-                        <tr>
-                            <th>Image</th>
-                            <th>Item Code</th>
-                            <th>Product Name</th>
-                        </tr>
-                        <asp:Repeater ID="rptKits" runat="server">
-                        <ItemTemplate>
-                        <tr>
-                            <td><a href="ProductEdit.aspx<%# GetBaseQueryString() + "&pid=" + ((IKitSummary) Container.DataItem).ProductID%>"><img src="<%# WebHelper.GetImagePathWeb() + ((IKitSummary) Container.DataItem).Url %>" /></a></td>
-                            <td><a href="ProductEdit.aspx<%# GetBaseQueryString() + "&pid=" + ((IKitSummary) Container.DataItem).ProductID%>"><%# ((IKitSummary) Container.DataItem).ItemCode %></a></td>
-                            <td><%# ((IKitSummary)Container.DataItem).Name%></td>
-                        </tr>
-                        </ItemTemplate>
-                        </asp:Repeater>
-                    </table>
-				</div>
-        </div>			
     </form>
 </body>
 </html>

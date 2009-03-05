@@ -22,6 +22,7 @@ namespace Cuyahoga.Modules.ECommerce {
         private ICommerceDao _dao;
         private IExtCommonDao _commonDao;
         private List<IPaymentProvider> _paymentProviders;
+        private IPaymentProvider _paymentProvider;
         private IBasketRules _rules;
 
         public ECommerceModule(ICatalogueViewService catatalogueService, ICommerceService commerceService, ICatalogueModificationService editService, IAccountService accountService, IOrderService orderService, IEmailSender emailSender, IDeliveryService deliveryService, ICultureService cultureService, IUserService userService) : base(catatalogueService, commerceService, editService, accountService, orderService, emailSender, deliveryService, cultureService, userService) {
@@ -35,7 +36,7 @@ namespace Cuyahoga.Modules.ECommerce {
             _rules = rules; 
             
             //we now get payment providers from the DB to make it more user friendly
-            PaymentProviders = CommerceService.GetEnabledPaymentProviders();
+            //PaymentProviders = CommerceService.GetEnabledPaymentProviders();
            
 
         }
@@ -49,6 +50,16 @@ namespace Cuyahoga.Modules.ECommerce {
         public IExtCommonDao CommonDao {
             get {
                 return _commonDao;
+            }
+        }
+
+        public IPaymentProvider PaymentProvider {
+            get {
+                return _paymentProvider;
+            }
+
+            set {
+                _paymentProvider = value;
             }
         }
 

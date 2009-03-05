@@ -333,7 +333,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
         protected virtual void CollectPayment(BasketDecorator basketOrder) {
 
             IElectronicPayment payment = new PaymentHelper(EModule.CommerceDao).CreatePayment(basketOrder, this);
-            IPaymentProvider provider = EModule.PaymentProviders[0];//HACK to get it to compile MUST FIX
+            IPaymentProvider provider = EModule.PaymentProvider;//HACK to get it to compile MUST FIX
 
             IWebFormPaymentProvider webProvider = provider as IWebFormPaymentProvider;
 
