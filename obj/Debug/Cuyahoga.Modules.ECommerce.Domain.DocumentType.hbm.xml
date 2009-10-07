@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+  <class name="DocumentType" table="Ecommerce_DocumentType" lazy="true">
+
+    <id name="_TypeID" column="TypeID" type="Int32" unsaved-value="0">
+      <generator class="native"/>
+    </id>
+    <property column="TypeName" type="String" name="_TypeName" not-null="true" length="128" />
+    <property column="CssClass" type="String" name="_CssClass" not-null="true" length="1024" />
+  </class>
+</hibernate-mapping>

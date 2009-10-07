@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+
+  <class name="Attribute" table="Ecommerce_Attribute" lazy="true">
+
+		<id name="_Attributeid" column="attributeID" type="Int64" unsaved-value="0">
+			<generator class="assigned"/>
+		</id>
+		
+		<property column="attributeReference" type="String" name="_AttributeReference" not-null="true" length="50" />
+		<property column="attributeDescription" type="String" name="_AttributeDescription" not-null="true" length="128" />
+		<property column="isDisplayable" type="Boolean" name="_IsDisplayable" />
+		<property column="baseUnit" type="String" name="_BaseUnit" length="50" />
+    
+  
+    <bag name="Options">
+      <key column="attributeID"/>
+      <one-to-many class="AttributeOptionValue"/>
+    </bag>
+
+
+    <many-to-one name="AttributeType" column="TypeID" not-null="true"/>
+
+  </class>
+</hibernate-mapping>

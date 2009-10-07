@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+
+  <class name="CountryDeliveryStateWeight" table="Ecommerce_CountryDeliveryStateWeight" lazy="true">
+
+		<composite-id access="field">
+			 <key-property name="_Stateid" column="stateID" type="Int16" />
+			 <key-property name="_WeightLevel" column="weightLevel" type="Int16" />
+			
+		</composite-id>
+		<!-- Composite primary key is experimental. View the documentation for syntax. --><!-- problems: gustavohe@gmail.com -->
+		<property column="price" type="Decimal" name="_Price" not-null="true" />
+		<property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
+		<property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
+		
+	</class>
+</hibernate-mapping>

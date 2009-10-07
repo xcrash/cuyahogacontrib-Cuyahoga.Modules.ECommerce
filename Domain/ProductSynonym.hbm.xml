@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
+
+  <class name="ProductSynonym" table="Ecommerce_ProductSynonym" lazy="true">
+
+    <composite-id access="field">
+      <key-property name="_AlternativePhrase" column="AlternativePhrase" type="String" />
+      <key-property name="_Productid" column="productID" type="Int64" />
+    </composite-id>
+    <property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
+    <property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
+</class>
+</hibernate-mapping>
