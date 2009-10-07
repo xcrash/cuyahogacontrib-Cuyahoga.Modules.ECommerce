@@ -1110,4 +1110,10 @@
   <data name="proceed to payment" xml:space="preserve">
     <value>Proceed to payment</value>
   </data>
+  <data name="already registered" xml:space="preserve">
+    <value>Your Email address has already been registered.</value>
+  </data>
+  <data name="registration" xml:space="preserve">
+    <value>Registration</value>
+  </data>
 </root>

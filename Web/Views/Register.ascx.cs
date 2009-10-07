@@ -33,9 +33,13 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
             }
         }
 
+        private ArrayList _errorList = new ArrayList();
+
 
         protected Cuyahoga.Modules.ECommerce.Web.Controls.UserDetailsEdit ctlUser;
         protected Cuyahoga.Modules.ECommerce.Web.Controls.AddressEdit ctlUserAddress;
+        protected PlaceHolder plhAdditonalErrors;
+
         protected Label lbMessage;
         protected LinkButton btnRegister;
 
@@ -50,23 +54,24 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
                     PerformRegistration();
                     //login the user and redirect them to where they came form.
 
-                     ECommerceModule mod = Module as ECommerceModule;
+                    ECommerceModule mod = Module as ECommerceModule;
 
-                     IStoreContext context = WebStoreContext.Current;
-                   
-                     AuthenticationModule am = (AuthenticationModule)this.Context.ApplicationInstance.Modules["AuthenticationModule"];
+                    IStoreContext context = WebStoreContext.Current;
 
-                     am.AuthenticateUser(ctlUser.EmailAddress, ctlUser.Password,  false);
-                     Cuyahoga.Core.Domain.User user = (Cuyahoga.Core.Domain.User)Context.User.Identity;
-                     WebStoreContext.Current.WebStoreUser = mod.AccountService.GetWebStoreUser(user.Id);
+                    AuthenticationModule am = (AuthenticationModule)this.Context.ApplicationInstance.Modules["AuthenticationModule"];
+
+                    am.AuthenticateUser(ctlUser.EmailAddress, ctlUser.Password, false);
+                    Cuyahoga.Core.Domain.User user = (Cuyahoga.Core.Domain.User)Context.User.Identity;
+                    WebStoreContext.Current.WebStoreUser = mod.AccountService.GetWebStoreUser(user.Id);
 
                     Response.Redirect(this.Page.Request.UrlReferrer.AbsoluteUri);
 
-                } catch (ThreadAbortException){
-                }catch (Exception ex) {
+                } catch (ThreadAbortException) { } catch (Exception ex) {
                     LogManager.GetLogger(GetType()).Debug(ex);
                     DisplayErrorMessage();
                 }
+            } else {
+                DisplayErrorMessage();
             }
 
         }
@@ -79,10 +84,30 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
         private void DisplayErrorMessage() {
             lbMessage.Text = GetText("There was an error registering your account");
             lbMessage.CssClass = Convert.ToString(CssStyles.Error);
+
+            //display additional mesages
+
+            foreach (string s in _errorList) {
+                Literal lit = new Literal();
+                lit.Text = s;
+                plhAdditonalErrors.Controls.Add(lit);
+            }
         }
 
         private bool ValidateDetails() {
-           return this.Page.IsValid; //needs more than this.
+
+            IList list = EModule.UserService.FindUsersByUsername(ctlUser.EmailAddress);
+            if (list != null && list.Count > 0) {
+                //user already exists
+                AddErrorMessage(GetText("Already registered"));
+            }
+            
+
+           return this.Page.IsValid && _errorList.Count == 0; //needs more than this.
+        }
+
+        private void AddErrorMessage(string message) {
+            _errorList.Add(message);
         }
 
         //should put this in account service.
@@ -96,6 +121,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
                 detail.Address = Address;
                 EModule.CommonDao.SaveObject(detail);
 
+               
                 User user = new User();
                 user.Email = ctlUser.EmailAddress;
                 user.UserName = ctlUser.EmailAddress;

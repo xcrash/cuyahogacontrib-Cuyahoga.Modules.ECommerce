@@ -935,3 +935,12 @@ float:left;
 	float:right;
 	width:400px;
 }
+
+.Error {
+	color:white;
+	background-color:red;
+	font-weight:bold;
+	width:100%;
+	clear:both;
+	padding:5px;
+}

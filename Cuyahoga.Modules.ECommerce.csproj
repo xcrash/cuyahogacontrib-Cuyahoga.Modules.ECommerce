@@ -1151,6 +1151,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Controls\AddressEdit.ascx">
+      <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Controls\AddressView.ascx">
     </Content>
@@ -1347,6 +1348,7 @@
     <PostBuildEvent>set CUY_DIR=C:\SourceForge\LeeCommerce\Web
 set MOD_PATH=Modules\ECommerce
 set MOD_ADMIN_PATH=Modules\ECommerce\Admin
+set MOD_TEMPLATE_PATH=Templates\AnotherRed\css
 set MOD_ADMIN_CONTROL_PATH=Modules\ECommerce\Admin\controls\
 set MOD_ADMIN_IMAGE_PATH=Modules\ECommerce\Admin\Images\
 
@@ -1355,6 +1357,9 @@ xcopy /y /r /d "$(TargetDir)$(TargetName).pdb" "%25CUY_DIR%25\bin"
 xcopy /s /y /r /d "$(ProjectDir)web\views\*.as?x" "%25CUY_DIR%25\%25MOD_PATH%25\views"
 xcopy /s /y /r /d "$(ProjectDir)web\*.aspx" "%25CUY_DIR%25\%25MOD_PATH%25"
 xcopy /s /y /r /d "$(ProjectDir)web\admin\*.as?x" "%25CUY_DIR%25\%25MOD_ADMIN_PATH%25"
+
+xcopy /s /y /r /d "$(ProjectDir)CuyahogaModifications\Templates\AnotherRed\Css\*.css" "%25CUY_DIR%25\%25MOD_TEMPLATE_PATH%25"
+
 xcopy /s /y /r /d "$(ProjectDir)web\admin\controls\*.as?x" "%25CUY_DIR%25\%25MOD_ADMIN_CONTROL_PATH%25"
 xcopy /s /y /r /d "$(ProjectDir)web\admin\images\*.png" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25"
 xcopy /s /y /r /d "$(ProjectDir)web\admin\images\*.gif" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25"
