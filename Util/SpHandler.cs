@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-
+using System.Xml;
 using log4net;
 
 namespace Cuyahoga.Modules.ECommerce.Util {
@@ -15,6 +15,7 @@ namespace Cuyahoga.Modules.ECommerce.Util {
         public const string DATA_SOURCE_NAME_DEFAULT = "default";
         public const string CONFIG_PARAMETER_SEPERATOR = ".";
         public const string CONNECTION_STRING_SUFFIX = "ConnectionString";
+        public const string CASTLE_CONFIG_PATH = "Config\\Properties.config";
 
         protected string _connectionString = "";
         protected string _cleanConnectionString = "";
@@ -69,6 +70,21 @@ namespace Cuyahoga.Modules.ECommerce.Util {
             if (string.IsNullOrEmpty(dataSourceName)) {
                 dataSourceName = DATA_SOURCE_NAME_DEFAULT;
             }
+
+            try {
+                //try the castle db connection
+                XmlDocument doc = new XmlDocument();
+                string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase);
+                //tidy it up a bit
+                path = path.Substring(6, path.Length - 9); //remove bin on the end and the file:// stuff
+                if (System.IO.File.Exists(path)) {
+                    doc.Load(String.Concat(path, CASTLE_CONFIG_PATH));
+                    XmlNode node = doc.SelectSingleNode("configuration//properties//connectionString");
+                    if (!string.IsNullOrEmpty(node.InnerText)) {
+                        return node.InnerText;
+                    }
+                }
+            } catch { }
 
             try {
                 strConn = ConfigurationManager.ConnectionStrings[dataSourceName].ConnectionString;
