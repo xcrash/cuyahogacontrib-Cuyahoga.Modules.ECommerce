@@ -26,7 +26,7 @@
 	<td class="title"><%=GetText("password")%>:&nbsp;*</td>
 	<td>
 		<asp:textbox id="txtPassword" Columns="45" runat="server" textmode="SingleLine" />
-		>
+		
 	</td>
 </tr>
 

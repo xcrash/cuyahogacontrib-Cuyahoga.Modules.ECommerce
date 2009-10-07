@@ -1101,10 +1101,10 @@
   <data name="submit order request" xml:space="preserve">
     <value>Submit order request</value>
   </data>
-  <data name="There was an error registering your account" xml:space="preserve">
+  <data name="there was an error registering your account" xml:space="preserve">
     <value>There was an error registering your account.</value>
   </data>
-  <data name="You have been registerd on the store." xml:space="preserve">
+  <data name="you have been registerd on the store." xml:space="preserve">
     <value>You have been registerd on the store.</value>
   </data>
   <data name="proceed to payment" xml:space="preserve">

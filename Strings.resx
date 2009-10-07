@@ -867,4 +867,7 @@
   <data name="proceed to payment" xml:space="preserve">
     <value>Proceed to payment</value>
   </data>
+  <data name="there was an error registering your account" xml:space="preserve">
+    <value>There was an error registering your account</value>
+  </data>
 </root>

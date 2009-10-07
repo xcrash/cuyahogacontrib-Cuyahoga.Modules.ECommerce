@@ -77,8 +77,9 @@ namespace Cuyahoga.Modules.ECommerce.Util {
                 string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase);
                 //tidy it up a bit
                 path = path.Substring(6, path.Length - 9); //remove bin on the end and the file:// stuff
+                path = String.Concat(path, CASTLE_CONFIG_PATH);
                 if (System.IO.File.Exists(path)) {
-                    doc.Load(String.Concat(path, CASTLE_CONFIG_PATH));
+                    doc.Load(path);
                     XmlNode node = doc.SelectSingleNode("configuration//properties//connectionString");
                     if (!string.IsNullOrEmpty(node.InnerText)) {
                         return node.InnerText;
