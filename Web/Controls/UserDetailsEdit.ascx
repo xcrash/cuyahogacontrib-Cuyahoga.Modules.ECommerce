@@ -3,37 +3,52 @@
 	<td class="title"><%=GetText("first name")%>:&nbsp;*</td>
 	<td>
 		<asp:textbox id="txtFirstName" Columns="45" runat="Server"/>
-		<asp:RequiredFieldValidator ID="rfvFirstName" ControlToValidate="txtFirstName" display="dynamic" Runat="Server"/>
 	</td>
+	<td><asp:RequiredFieldValidator ID="rfvFirstName" ControlToValidate="txtFirstName" display="dynamic" Runat="Server"/></td>
 </tr>
 <tr>
 	<td class="title"><%=GetText("last name")%>:&nbsp;*</td>
 	<td>
 		<asp:textbox id="txtLastName" Columns="45" runat="Server"/>
-		<asp:RequiredFieldValidator ID="rfvLastName" ControlToValidate="txtLastName" display="dynamic" Runat="Server"/>
+	
 	</td>
+	<td>	<asp:RequiredFieldValidator ID="rfvLastName" ControlToValidate="txtLastName" display="dynamic" Runat="Server"/></td>
 </tr>
 <tr>
 	<td class="title"><%=GetText("email address")%>:&nbsp;*</td>
 	<td>
 		<asp:textbox id="txtEmailAddress" Columns="45" runat="server" textmode="SingleLine" />
-		<asp:RequiredFieldValidator ID="rfvEmailAddress" ControlToValidate="txtLastName" display="dynamic" Runat="Server"/>
-		<asp:RegularExpressionValidator ID="regEmailAddress" ControlToValidate="txtEmailAddress" display="dynamic" Runat="server" />
+		
 	</td>
+	<td><asp:RequiredFieldValidator ID="rfvEmailAddress" ControlToValidate="txtLastName" display="dynamic" Runat="Server"/>
+		<asp:RegularExpressionValidator ID="regEmailAddress" ControlToValidate="txtEmailAddress" display="dynamic" Runat="server" /></td>
 </tr>
 
 <tr>
 	<td class="title"><%=GetText("password")%>:&nbsp;*</td>
 	<td>
-		<asp:textbox id="txtPassword" Columns="45" runat="server" textmode="SingleLine" />
+		<asp:textbox id="txtPassword" TextMode="Password" Columns="45" runat="server"/>
+		
 		
 	</td>
+	<td><asp:RequiredFieldValidator ID="rfvPassword" ControlToValidate="txtPassword"  display="dynamic" Runat="Server"/>
+		<asp:CompareValidator Display="Dynamic" ID="cfvPasswords" runat="server" ControlToValidate="txtPassword"  ControlToCompare="txtConfirmPassword"></asp:CompareValidator></td>
+</tr>
+
+<tr>
+	<td class="title"><%=GetText("confirm password")%>:&nbsp;*</td>
+	<td>
+		<asp:textbox id="txtConfirmPassword" TextMode="Password" Columns="45" runat="server" />
+		
+	</td>
+	<td><asp:RequiredFieldValidator ID="rfvPasswordConfirm" ControlToValidate="txtConfirmPassword" display="dynamic" Runat="Server"/></td>
 </tr>
 
 <tr>
 	<td class="title"><%=GetText("telephone number")%>:&nbsp;*</td>
 	<td>
 		<asp:textbox id="txtTelephoneNumber" Columns="45" runat="server" textmode="SingleLine" />
-		<asp:RequiredFieldValidator ID="rfvTelephoneNumber" ControlToValidate="txtTelephoneNumber" display="dynamic" Runat="Server"/>
+		
 	</td>
+	<td><asp:RequiredFieldValidator ID="rfvTelephoneNumber" ControlToValidate="txtTelephoneNumber" display="dynamic" Runat="Server"/></td>
 </tr>

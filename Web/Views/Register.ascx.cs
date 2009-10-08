@@ -17,6 +17,7 @@ using System.Web.UI.WebControls;
 using Cuyahoga.Web.HttpModules;
 using Cuyahoga.Core.Domain;
 using System.Threading;
+using System.Web.UI.HtmlControls;
 
 namespace Cuyahoga.Modules.ECommerce.Web.Views {
 
@@ -86,12 +87,17 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
             lbMessage.CssClass = Convert.ToString(CssStyles.Error);
 
             //display additional mesages
+            HtmlGenericControl list = new HtmlGenericControl("ul");
 
             foreach (string s in _errorList) {
+                HtmlGenericControl listItem = new HtmlGenericControl("li");
                 Literal lit = new Literal();
                 lit.Text = s;
-                plhAdditonalErrors.Controls.Add(lit);
+                listItem.Controls.Add(lit);
+                list.Controls.Add(listItem);
             }
+
+            plhAdditonalErrors.Controls.Add(list);
         }
 
         private bool ValidateDetails() {
@@ -100,6 +106,10 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
             if (list != null && list.Count > 0) {
                 //user already exists
                 AddErrorMessage(GetText("Already registered"));
+            }
+
+            if (ctlUser.Password != ctlUser.ConfirmPassword) {
+                AddErrorMessage(GetText("passwords_do_not_match"));
             }
             
 

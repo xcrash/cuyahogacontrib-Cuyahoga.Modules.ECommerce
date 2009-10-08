@@ -18,12 +18,16 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
         protected TextBox txtTelephoneNumber;
         protected TextBox txtFaxNumber;
         protected TextBox txtPassword;
+        protected TextBox txtConfirmPassword;
         
         protected RequiredFieldValidator rfvFirstName;
         protected RequiredFieldValidator rfvLastName;
         protected RequiredFieldValidator rfvEmailAddress;
         protected RequiredFieldValidator rfvTelephoneNumber;
         protected RegularExpressionValidator regEmailAddress;
+        protected RequiredFieldValidator rfvPassword;
+        protected RequiredFieldValidator rfvPasswordConfirm;
+        protected CompareValidator cfvPasswords;
 
         public bool Enabled {
             get {
@@ -42,6 +46,8 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
                     = rfvFirstName.Enabled
                     = rfvLastName.Enabled
                     = rfvEmailAddress.Enabled
+                    = rfvPassword.Enabled
+                    = rfvPasswordConfirm.Enabled
                     = rfvTelephoneNumber.Enabled
                     = value;
             }
@@ -147,7 +153,23 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
                     txtPassword.Text = value;
                 }
             }
+        }
+
+        public string ConfirmPassword {
+            get {
+                if (txtConfirmPassword != null) {
+                    return txtConfirmPassword.Text;
+                } else {
+                    return "";
+                }
+            }
+            set {
+                if (txtConfirmPassword != null) {
+                    txtConfirmPassword.Text = value;
+                }
+            }
         }  
+
         public string CompanyName {
             get {     
                     return "";
@@ -208,8 +230,10 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
                 = rfvLastName.Text
                 = rfvEmailAddress.Text
                 = rfvTelephoneNumber.Text
+                = rfvPassword.Text
+                = rfvPasswordConfirm.Text
                 = "<div class=\"error\">" + GetText("required_field") + "</div>";
-
+            cfvPasswords.ErrorMessage = "<div class=\"error\">" + GetText("passwords_do_not_match") + "</div>";
             regEmailAddress.Text = "<div class=\"error\">" + GetText("invalid_email") + "</div>";
             regEmailAddress.ValidationExpression = StringUtils.REGEXP_VALID_EMAIL_ADDRESS;
         }
