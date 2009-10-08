@@ -33,6 +33,7 @@
 	</td>
 	<td><asp:RequiredFieldValidator ID="rfvPassword" ControlToValidate="txtPassword"  display="dynamic" Runat="Server"/>
 		<asp:CompareValidator Display="Dynamic" ID="cfvPasswords" runat="server" ControlToValidate="txtPassword"  ControlToCompare="txtConfirmPassword"></asp:CompareValidator></td>
+		<asp:CustomValidator ID="cfvInvalidPassword" runat="server" ControlToValidate="txtPassword"></asp:CustomValidator>
 </tr>
 
 <tr>

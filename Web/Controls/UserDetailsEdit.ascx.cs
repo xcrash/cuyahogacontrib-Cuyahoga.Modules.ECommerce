@@ -28,6 +28,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
         protected RequiredFieldValidator rfvPassword;
         protected RequiredFieldValidator rfvPasswordConfirm;
         protected CompareValidator cfvPasswords;
+        protected CustomValidator cfvInvalidPassword;
 
         public bool Enabled {
             get {
@@ -49,6 +50,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
                     = rfvPassword.Enabled
                     = rfvPasswordConfirm.Enabled
                     = rfvTelephoneNumber.Enabled
+                    = cfvInvalidPassword.Enabled
                     = value;
             }
         }
@@ -226,6 +228,8 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
 
         protected virtual void ConfigureValidators() {
 
+            cfvInvalidPassword.ServerValidate += new ServerValidateEventHandler(cfvInvalidPassword_ServerValidate);
+
             rfvFirstName.Text
                 = rfvLastName.Text
                 = rfvEmailAddress.Text
@@ -235,8 +239,14 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
                 = "<div class=\"error\">" + GetText("required_field") + "</div>";
             cfvPasswords.ErrorMessage = "<div class=\"error\">" + GetText("passwords_do_not_match") + "</div>";
             regEmailAddress.Text = "<div class=\"error\">" + GetText("invalid_email") + "</div>";
+            cfvInvalidPassword.Text = "<div class=\"error\">" + GetText("invalid password") + "</div>";
             regEmailAddress.ValidationExpression = StringUtils.REGEXP_VALID_EMAIL_ADDRESS;
         }
+
+        void cfvInvalidPassword_ServerValidate(object source, ServerValidateEventArgs args) {
+            args.IsValid = Cuyahoga.Core.Domain.User.ValidatePassword(args.Value);
+        }
+
         #endregion
     }
 }

@@ -1113,6 +1113,9 @@
   <data name="already registered" xml:space="preserve">
     <value>Your Email address has already been registered.</value>
   </data>
+  <data name="invalid password" xml:space="preserve">
+    <value>You have entered an invallid password.</value>
+  </data>
   <data name="registration" xml:space="preserve">
     <value>Registration</value>
   </data>
