@@ -45,11 +45,6 @@ namespace Cuyahoga.Modules.ECommerce.Service {
                     node.NodeID = Convert.ToInt32(epc.CategoryID);
                     node.Description = epc.CategoryDescription;
                     node.BannerImageUrl = epc.BannerImageUrl;
-                    if (node.Flash == null) {
-                        node.Flash = new Domain.Catalogue.FlashAnimation();
-                    }
-
-                    FlashHelper.CopyFlash(epc.Flash, node.Flash);
 
                     IImage image = new Domain.Catalogue.Image();
                     ImageHelper.CopyImage(epc, image);
@@ -119,12 +114,6 @@ namespace Cuyahoga.Modules.ECommerce.Service {
                 node.Description = cat.CategoryDescription;
                 node.Links = cat.Links;
                 node.BannerImageUrl = cat.BannerImageUrl;
-
-                if(node.Flash == null){
-                    node.Flash  = new Domain.Catalogue.FlashAnimation();
-                }
-
-                FlashHelper.CopyFlash(cat, node.Flash);
                 
                 if (node.Image == null) {
                     node.Image = new Domain.Catalogue.Image();

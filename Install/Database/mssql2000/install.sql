@@ -1454,3 +1454,43 @@ GO
 
 
 
+ALTER TABLE [ECommerce_Category] DROP COLUMN KitDescription;
+GO
+
+ALTER TABLE [ECommerce_Category] DROP COLUMN KitPicture;
+GO
+
+ALTER TABLE [ECommerce_Category] DROP COLUMN flashAnimationQuality;
+GO
+
+ALTER TABLE [ECommerce_Category] DROP COLUMN flashAnimationUrl;
+GO
+
+ALTER TABLE [ECommerce_Category] DROP COLUMN flashAnimationWidth;
+GO
+
+ALTER TABLE [ECommerce_Category] DROP COLUMN flashAnimationAltText;
+GO
+
+ALTER TABLE [ECommerce_Category] DROP COLUMN flashAnimationHeight;
+GO
+
+ALTER TABLE [ECommerce_Category] DROP COLUMN flashAnimationBackgroundColour;
+GO
+
+ALTER TABLE [ECommerce_Category] DROP COLUMN tylosandimageurl;
+GO
+
+CREATE procedure [dbo].[getECommerceSectionId]  
+				  @siteId int 
+				    
+				  as  
+				    
+				  select TOp 1 sec.sectionId  from
+				cuyahoga_site s
+			inner join cuyahoga_node n on s.siteid = n.siteId
+			inner join cuyahoga_section sec on n.nodeId = sec.nodeId
+			where s.siteId = @siteId
+AND sec.moduletypeid = (Select moduletypeid from cuyahoga_moduletype where name = 'ECommerce')
+AND sec.title = 'Catalogue';
+GO

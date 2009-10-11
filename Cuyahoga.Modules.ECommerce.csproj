@@ -949,7 +949,10 @@
     <EmbeddedResource Include="Domain\Charge.hbm.xml" />
     <EmbeddedResource Include="Domain\CountryCharge.hbm.xml" />
     <EmbeddedResource Include="Domain\CountryDeliveryWeight.hbm.xml" />
+    <Content Include="Install\Database\mssql2000\CreateDemoSite.sql" />
+    <Content Include="Install\Database\mssql2000\Delete Demo Site.sql" />
     <Content Include="Install\Database\mssql2000\install.sql" />
+    <Content Include="Install\Database\mssql2000\SampleData.sql" />
     <Content Include="Install\Database\mssql2000\uninstall.sql" />
     <Content Include="Test\Cuyahoga.Modules.ECommerce.Test.csproj" />
     <Content Include="UI\WebImageMaker\WebImageMaker.css" />
@@ -1191,6 +1194,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Controls\BreadCrumbTrail.ascx">
+      <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Controls\MenuTabs.ascx">
       <SubType>ASPXCodeBehind</SubType>

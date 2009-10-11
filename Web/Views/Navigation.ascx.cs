@@ -36,7 +36,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
         private Cuyahoga.Web.UI.PageEngine _page;
 
         protected System.Web.UI.WebControls.PlaceHolder plhNodes;
-        protected CatalogueUrlHelper ECommerceURLHelper;
+        protected CatalogueUrlHelper ECommerceURLHelper = new CatalogueUrlHelper(null);
 
         protected void Page_Load(object sender, EventArgs e) {
 
@@ -65,13 +65,15 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
         private HtmlControl BuildListItemFromCategory(CategoryNode cNode) {
 
             HtmlGenericControl listItem = new HtmlGenericControl("li");
-
+            
             HyperLink hpl = new HyperLink();
-            hpl.NavigateUrl = Cuyahoga.Web.Util.UrlHelper.GetSiteUrl() + "/5/section.aspx/view/catnav/node/" + cNode.NodeID;
+            hpl.NavigateUrl = Cuyahoga.Web.Util.UrlHelper.GetSiteUrl() + "/" + ECommerceURLHelper.GetECommerceSectionId(_page.RootNode.Site.Id) + "/section.aspx/view/catnav/node/" + +cNode.NodeID;
             hpl.Text = cNode.Name;
             listItem.Controls.Add(hpl);
             return listItem;
         }
+
+
 
         private List<CategoryNode> GetProductCategories() {
             try {

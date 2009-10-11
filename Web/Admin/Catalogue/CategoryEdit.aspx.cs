@@ -211,7 +211,6 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
 
             newCategory.CategoryDescription = fckDescription.Value;
             newCategory.CategoryName = txtCategoryName.Text;
-            newCategory.KitDescription = txtKitDescription.Text;
             newCategory.CssClass = txtCss.Text;
             decimal changeBY = 0;
 

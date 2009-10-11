@@ -6,11 +6,12 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
 
 
     [Serializable]
-    public class Category : IImage, ICategory, IFlashAnimation {
+    public class Category : IImage, ICategory{
 
         public const short SORT_ORDER_MIN = 1;
 
         #region Private Members
+        private string _bannerImageurl;
         private bool _isChanged;
         private bool _isDeleted;
         private long _categoryid;
@@ -21,16 +22,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         private bool _sortOrderSpecified;
         private bool _ispublished;
 
-        private string _flashanimationurl;
-        private short? _flashanimationwidth;
-        private short? _flashanimationheight;
-        private string _flashanimationalttext;
-        private string _flashanimationquality;
-        private string _flashanimationcolour;
-
-        private string _tylosandimageurl;
         private string _imageurl;
-        private string _bannerImageurl;
         private short? _width;
         private short? _height;
         private short _imageType;
@@ -39,9 +31,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         private DateTime _inserttimestamp;
         private DateTime _updatetimestamp;
         private IList _links;
-        private IList _kits;
-        private string _kitPicture;
-        private string _kitDescription;
+
         private decimal? _priceChangePercent;
    
         #endregion
@@ -121,24 +111,11 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _FlashAnimation {
-            get { return _imageurl; }
-            set { _imageurl = value; }
-        }
-
-
-        /// <summary>
-        /// 
-        /// </summary>
         internal virtual string _ImageUrl {
             get { return _imageurl; }
             set { _imageurl = value; }
         }
 
-        internal virtual string _BannerImageUrl {
-            get { return _bannerImageurl; }
-            set { _bannerImageurl = value; }
-        }
 
         /// <summary>
         /// 
@@ -184,6 +161,13 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }
+
+        internal virtual string _BannerImageUrl {
+            get { return _bannerImageurl; }
+            set { _bannerImageurl = value; }
+        }
+        
+    
         #endregion // Internal Accessors for NHibernate
 
         #region Public Properties
@@ -277,109 +261,6 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         public virtual IList Links {
             get { return _links; }
             set { _links = value; }
-        }
-
-        public virtual IList Kits {
-            get { return _kits; }
-            set { _kits = value; }
-        }
-
-        public virtual string KitDescription {
-            get { return _kitDescription; }
-            set {
-                if (value != null)
-                    if (value.Length > 128)
-                        throw new ArgumentOutOfRangeException("Invalid value for Kit Description", value, value.ToString());
-
-                _isChanged |= (_kitDescription != value); _kitDescription = value;
-            }
-        }
-
-        public virtual string KitPicture {
-            get { return _kitPicture; }
-            set {
-                if (value != null)
-                    if (value.Length > 128)
-                        throw new ArgumentOutOfRangeException("Invalid value for Kit Picture", value, value.ToString());
-
-                _isChanged |= (_kitPicture != value); _kitPicture = value;
-            }
-        }
-
-        public virtual string FlashUrl {
-            get { return _flashanimationurl; }
-            set {
-                if (value != null)
-                    if (value.Length > 128)
-                        throw new ArgumentOutOfRangeException("Invalid value for ImageUrl", value, value.ToString());
-
-                _isChanged |= (_flashanimationurl != value); _flashanimationurl = value;
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>		
-        public virtual short? FlashWidth {
-            get { return _flashanimationwidth; }
-            set { _isChanged |= (_width != value); _flashanimationwidth = value; }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>		
-        public virtual short? FlashHeight {
-            get { return _flashanimationheight; }
-            set { _isChanged |= (_height != value); _flashanimationheight = value; }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>		
-        public virtual string FlashAltText {
-            get { return _flashanimationalttext; }
-            set {
-                if (value != null)
-                    if (value.Length > 128)
-                        throw new ArgumentOutOfRangeException("Invalid value for AltText", value, value.ToString());
-
-                _isChanged |= (_flashanimationalttext != value); _flashanimationalttext = value;
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>		
-        public virtual string FlashQuality {
-            get { return _flashanimationquality; }
-            set {
-                if (value != null)
-                    if (value.Length > 128)
-                        throw new ArgumentOutOfRangeException("Invalid value for quality", value, value.ToString());
-
-                _isChanged |= (_flashanimationquality != value); _flashanimationquality = value;
-            }
-        }
-        public virtual string FlashBackgroundColour {
-            get { return _flashanimationcolour; }
-            set {
-                if (value != null)
-                    if (value.Length > 7) //max hex code --hmm what about rgb
-                        throw new ArgumentOutOfRangeException("Invalid value for background colour", value, value.ToString());
-
-                _isChanged |= (_flashanimationcolour != value); _flashanimationcolour = value;
-            }
-        }
-
-        public virtual string _TyloSandImageUrl {
-            get { return _tylosandimageurl; }
-            set {
-                if (value != null)
-                    if (value.Length > 128)
-                        throw new ArgumentOutOfRangeException("Invalid value for ImageUrl", value, value.ToString());
-
-                _isChanged |= (_tylosandimageurl != value); _tylosandimageurl = value;
-            }
         }
 
         #endregion
@@ -549,19 +430,6 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public IFlashAnimation Flash {
-            get {
-                return this;
-            }
-            set {
-                this.FlashAltText = value.FlashAltText;
-                this.FlashHeight = value.FlashHeight;
-                this.FlashUrl = value.FlashUrl;
-                this.FlashWidth = value.FlashWidth;
-                this.FlashQuality = value.FlashQuality;
-            }
-        }
-
 
         public string Name {
             get {
@@ -594,11 +462,6 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
                 }
             }
         }
-
-  
-
         #endregion
-
-
     }
 }

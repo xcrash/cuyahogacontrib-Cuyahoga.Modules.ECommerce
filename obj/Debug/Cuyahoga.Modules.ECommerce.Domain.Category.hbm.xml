@@ -19,21 +19,7 @@
     <property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
     <property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
     <property column="bannerImageUrl" type="String" name="_BannerImageUrl" length="128" />
-    
-    <property column="tylosandImageUrl" type="String" name="_TyloSandImageUrl" length="128" />
-    <!-- arguably all this Kit stuff should be normalised and out into a seperate table, going to leave it here for performance reasons though.-->
-    <property column="KitPicture" type="String" name="KitPicture" length="128" />
-    <property column="KitDescription" type="String" name="KitDescription" length="128" />
-    <property column="priceChangePercent" type="Decimal" name="PriceChangePercent" not-null="false" />
-   
-    <!-- arguably all this flash stuff should be normalised and out into a seperate table, going to leave it here for performance reasons though.-->
-    <property column="flashAnimationUrl" type="String" name="FlashUrl" length="128" />
-    <property column="flashAnimationQuality" type="String" name="FlashQuality" length="128" />
-    <property column="flashAnimationWidth" type="Int16" name="FlashWidth" />
-    <property column="flashAnimationHeight" type="Int16" name="FlashHeight" />
-    <property column="flashAnimationAltText" type="String" name="FlashAltText" length="128" />
-    <property column="flashAnimationBackgroundColour" type="String" name="FlashBackgroundColour" length="7" />
-    
+        
     <many-to-one name="_ParentCategoryid" column="parentCategoryID" class="Category" />
     <bag name="Links">
       <key column="Categoryid"/>

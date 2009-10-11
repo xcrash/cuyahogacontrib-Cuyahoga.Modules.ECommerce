@@ -1,7 +1,17 @@
 using System.Collections.Specialized;
+using System;
+using System.Data;
+using System.Drawing;
+using System.Web;
+using System.Collections;
 using Cuyahoga.Modules.ECommerce.Core;
 using Cuyahoga.Modules.ECommerce.Domain.Catalogue.Interfaces;
-
+using Cuyahoga.Modules.ECommerce.Util.Interfaces;
+using Cuyahoga.Modules.ECommerce.Util;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Text;
+using log4net;
 namespace Cuyahoga.Modules.ECommerce {
 
 	/// <summary>
@@ -19,6 +29,25 @@ namespace Cuyahoga.Modules.ECommerce {
         public CatalogueUrlHelper(CatalogueViewModule controller) {
             _module = controller;
 		}
+
+        public virtual int GetECommerceSectionId(int siteId) {
+            int sectionId = 0;
+            try {
+                using (SpHandler sph = new SpHandler("getECommerceSectionId")) {
+
+                    sph.AddInParameter("siteId", DbType.Int32, 1, siteId);
+                    sph.ExecuteReader();
+
+                    while (sph.DataReader.Read()) {
+                        sectionId = Convert.ToInt32(sph.DataReader["sectionID"]);
+                    }
+                }
+            } catch (Exception e) {
+                LogManager.GetLogger(GetType()).Error(e);
+            }
+
+            return sectionId;
+        }
 
         public virtual string GetCatalogueNodeUrlForKits(ITrailItem node) {
             NameValueCollection paramList = GetBaseParamList();

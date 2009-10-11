@@ -2,7 +2,7 @@
 <%@ Import Namespace="Cuyahoga.Modules.ECommerce.Domain.Catalogue.Interfaces" %>
 <p id="breadcrumb">
 <asp:repeater runat="server" id="rptBreadCrumb">
-<headertemplate><a href="default.aspx">Home</a>  &raquo;  <a href="/demo.aspx">Shop</a>  &raquo;  </headertemplate>
+<headertemplate><a href="default.aspx">Home</a>  &raquo;  <a href="/Catalogue.aspx">Shop</a>  &raquo;  </headertemplate>
 <itemtemplate><%# (Container.ItemIndex > 1) ? "&nbsp; &raquo;  &nbsp;" : ""%><%# (Container.ItemIndex > 0) ? ("<a href=\"" + UrlHelper.GetCatalogueNodeUrl((ITrailItem)Container.DataItem) + "\">" + ((ITrailItem)Container.DataItem).Name + "</a>") : ""%></itemtemplate>
 <footertemplate></footertemplate>
 </asp:repeater>

@@ -1,3 +1,4 @@
+
 INSERT INTO [dbo].[cuyahoga_template]
 		           ([name]
 		           ,[basepath]
