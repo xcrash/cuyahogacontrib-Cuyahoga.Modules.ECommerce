@@ -1514,3 +1514,27 @@ ALTER procedure [dbo].[getFamilyRelatedProducts]
 						  	  order by pcs.itemcode;
 GO
 
+
+-- Changeset r1.0/ModuleConfiguration.xml::currency::cook::(MD5Sum: 2b1a7976346026f82320c629c34ff886)
+INSERT INTO [ECommerce_Currency]
+						             ([currencyCode]
+						             ,[exchangeRate]
+						             ,[inserttimestamp]
+						             ,[updatetimestamp])
+						       VALUES
+						             ('GBP'
+						             ,1
+						             ,GEtDAte()
+						             ,GEtDAte())
+						  
+						  INSERT INTO [ECommerce_Currency]
+						             ([currencyCode]
+						             ,[exchangeRate]
+						             ,[inserttimestamp]
+						             ,[updatetimestamp])
+						       VALUES
+						             ('USD'
+						             ,1
+						             ,GEtDAte()
+						             ,GEtDAte());
+GO
