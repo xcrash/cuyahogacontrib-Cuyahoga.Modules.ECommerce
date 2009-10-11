@@ -12,12 +12,10 @@
     <property column="additionalInformation" type="String" name="_AdditionalInformation" not-null="false" length="1024" />
 		<property column="stockLevel" type="Int32" name="_StockLevel" not-null="true" />
 		<property column="isPublished" type="Boolean" name="_IsPublished" not-null="true" />
-    <property column="isKit" type="Boolean" name="IsKit" not-null="false" />
     <property column="basePrice" type="Decimal" name="_BasePrice" not-null="true" />
     <property column="basePriceDescription" type="String" name="BasePriceDescription" not-null="false" length="50"/>
     <property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
     <property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
-    <property column="productFamily" type="String" name="_ProductFamily" not-null="false" length="50" />
     <property column="features" type="String" name="Features" not-null="false" length="1024" />
     
     <bag name="Images">

@@ -29,13 +29,6 @@
         </tr>
 
         <tr>
-            <td>Product Family</td>
-            <td>
-                <asp:TextBox ID="txtProductFamily" runat="server" Width="100"/>
-            </td>	
-        </tr>
-
-        <tr>
             <td>Finish</td>
             <td>
                 <asp:TextBox ID="txtFinish" runat="server" Width="200"/>
@@ -63,12 +56,7 @@
             <td><asp:TextBox ID="txtPriceDescription" runat="server" Width="100"></asp:TextBox></td>
         </tr>
 
-        <tr>
-            <td>Is Kit?</td>
-            <td><asp:CheckBox ID="chkIsKit" runat="server" Width="200" AutoPostBack="true"/></td>
-        </tr>
-
-        <asp:Panel ID="pnlKit" runat="server" Visible="false">
+      
         <tr>
             <td>Short Description</td>
             <td><fckeditorv2:fckeditor id="fckShortDescription"  runat="server" height="150px" width="650px" ></fckeditorv2:fckeditor></td>
@@ -77,13 +65,7 @@
         <tr>
             <td>Features</td>
             <td><fckeditorv2:fckeditor id="fckFeatures"  runat="server" height="150px" width="650px" ></fckeditorv2:fckeditor></td>
-        </tr>
-
-        <tr>
-            <td>Kit Comprises</td>
-            <td><fckeditorv2:fckeditor id="fckKitComprises"  runat="server" height="150px" width="650px" ></fckeditorv2:fckeditor></td>
-        </tr>
-        </asp:Panel>
+        </tr>       
 
     </tbody>
 </table>

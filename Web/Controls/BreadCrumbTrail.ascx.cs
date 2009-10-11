@@ -17,5 +17,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
             rptBreadCrumb.DataSource = nodeList;
             rptBreadCrumb.DataBind();
         }
+
+    
 	}
 }

@@ -35,6 +35,10 @@ namespace Cuyahoga.Modules.ECommerce.Core {
         public new string GetText(string key) {
             return base.GetText(key);
         }
+
+        public string AppPath {
+            get { return Cuyahoga.Web.Util.UrlHelper.GetApplicationPath(); }
+        }
         #endregion
     }
 }

@@ -11,7 +11,7 @@
 	</asp:Panel>
 	<asp:Panel ID="pnlCatImage" runat="server" Visible="false">
 	    <div id="images">
-		    <img src="<%=BannerImageUrl%>" alt="<%=CatImageAltText%>" Width="500px"/>
+		    <img src="<%=BannerImageUrl%>" alt="<%=CatImageAltText%>" width="500px"/>
 	    </div>
 	</asp:Panel>
 	<asp:repeater runat="server" id="rptCategories">

@@ -4,7 +4,7 @@
         <h3 class="headerBackGround">Basket</h3>
     </div>
     <div class="sideBox">
-<p><a href="<%=AppPath%>ViewBasket.aspx">View Basket</a>:</p>
+<p><a href="<%=AppPath%>Basket.aspx">View Basket</a>:</p>
 <asp:Panel ID="pnlDetails" runat="server" Visible="false">
 <p>Total items: <%=ItemCount%></p>
 <p>Total price: <asp:literal id="litBasketTotal" runat="server" /></p>

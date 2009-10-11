@@ -1494,3 +1494,9 @@ CREATE procedure [dbo].[getECommerceSectionId]
 AND sec.moduletypeid = (Select moduletypeid from cuyahoga_moduletype where name = 'ECommerce')
 AND sec.title = 'Catalogue';
 GO
+
+ALTER TABLE [ECommerce_Product] DROP COLUMN productfamily;
+GO
+
+ALTER TABLE [ECommerce_Product] DROP COLUMN IsKit;
+GO

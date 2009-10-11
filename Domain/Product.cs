@@ -22,7 +22,6 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         private long _productid;
         private string _itemcode;
         private string _productname;
-        private string _productfamily;
         private string _productdescription;
 
         private string _shortproductdescription;
@@ -31,7 +30,6 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         private int _stocklevel;
         private bool _ispublished;
 
-        private bool _iskit;
         private decimal _baseprice;
         private string _basepricedescription = "";
         private DateTime _inserttimestamp;
@@ -91,11 +89,6 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         internal virtual string _ProductName {
             get { return _productname; }
             set { _productname = value; }
-        }
-
-        internal virtual string _ProductFamily {
-            get { return _productfamily; }
-            set { _productfamily = value; }
         }
 
         /// <summary>
@@ -239,16 +232,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public virtual string ProductFamily {
-            get { return _productfamily; }
-            set {
-                if (value != null)
-                    if (value.Length > 128)
-                        throw new ArgumentOutOfRangeException("Invalid value for ProductName", value, value.ToString());
 
-                _isChanged |= (_productfamily != value); _productfamily = value;
-            }
-        }
 
         /// <summary>
         /// 
@@ -316,10 +300,6 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             set { _isChanged |= (_ispublished != value); _ispublished = value; }
         }
 
-        public virtual bool IsKit {
-            get { return _iskit; }
-            set { _isChanged |= (_iskit != value); _iskit = value; }
-        }
 
         /// <summary>
         /// 
@@ -458,11 +438,9 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             product.ItemCode = ItemCode;
             product.Name = ProductName;
             product.ProductID = Convert.ToInt64(ProductID);
-            product.ProductFamily = ProductFamily;
             product.PriceDescription = BasePriceDescription;
             product.Price = BasePrice;
             product.ShortDescription = ShortProductDescription;
-            product.IsKit = IsKit;
             product.AdditionalInformation = AdditionalInformation;
             product.Features = Features;
         }

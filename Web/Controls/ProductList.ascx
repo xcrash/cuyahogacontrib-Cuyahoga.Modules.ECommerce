@@ -1,27 +1,7 @@
 <%@ Control Language="c#" AutoEventWireup="false" Codebehind="ProductList.ascx.cs"  EnableViewState="True" Inherits="Cuyahoga.Modules.ECommerce.Web.Controls.ProductList" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"  %>
 <%@ Import Namespace="Cuyahoga.Modules.ECommerce.Domain.Catalogue.Interfaces" %>
 <%@ Register TagPrefix="ctl" Namespace="Koutny.WebControls" Assembly="Cuyahoga.Modules.ECommerce" %>
-<div class="col-left">
-    
-    
-     <div class="head">
-          <h3 class="headerBackGround">Compare Products</h3>
-      </div>
-      <div class="sideBox">
-          <p>You have no items to compare.</p>
-      </div>
-    
-      <div class="head">
-          <h3 class="headerBackGround">Shop by </h3>
-      </div>
-      <div class="sideBox">
-            <p>Category</p>
-       </div>
-       <div class="sideBox">
-            <p>Price</p>
-       </div>
 
-</div>
 <div class="col-main">
 <asp:Panel ID="pnlCatImage" runat="server" Visible="false">
 	    <div id="images">
@@ -29,8 +9,10 @@
 	    </div>
 	</asp:Panel>
     <h2><asp:Literal ID="litCategoryName" runat="server"></asp:Literal></h2>
+    
     <asp:Literal ID="litCategoryDescription" runat="server"></asp:Literal>
     
+    <asp:Panel ID="pnlFilter" runat="server">
     <div class="sideBox">
         <table id="listOptions">
        <tr>
@@ -59,7 +41,7 @@
 
 
 <p>Showing items <asp:Literal ID="litPaginationFrom" runat="server"></asp:Literal> - <asp:Literal  ID="litPaginationTo" runat="server"></asp:Literal> of <asp:Literal ID="litProductCount" runat="server"></asp:Literal></p>
-			
+			</asp:Panel>
 <asp:repeater runat="server" id="rptProductsList" EnableViewState="true">
   <headertemplate>
   <table id="productList">

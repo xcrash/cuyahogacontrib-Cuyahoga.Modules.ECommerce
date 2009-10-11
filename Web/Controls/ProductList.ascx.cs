@@ -41,6 +41,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
         protected Literal litPaginationTo;
         protected Literal litCategoryDescription;
         protected Literal litCategoryName;
+        protected Panel pnlFilter;
 
         public const string CSS_CLASS_EVEN = "even";
 
@@ -111,8 +112,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
 
         private void Page_Load(object sender, System.EventArgs e) {
             CreateListNavigation();
-
-
+            pnlFilter.Visible = false;
         }
 
         public void CreateListNavigation() {
@@ -145,6 +145,8 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
                 rptProductsGrid.DataSource = productList;
                 rptProductsGrid.DataBind();
                 rptProductsGrid.Visible = true;
+
+                pnlFilter.Visible = (productList.Count > 0);
 
                 litCategoryDescription.Text = node.Description;
                 litCategoryName.Text = node.Name;

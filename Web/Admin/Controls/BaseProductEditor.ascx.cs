@@ -34,10 +34,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin.Controls {
         public TextBox txtPrice;
         public TextBox txtPriceDescription;
         
-        public CheckBox chkIsKit;
-        public Panel pnlKit;
 
-        public TextBox txtProductFamily;
         public TextBox txtFinish;
         public TextBox txtWeight;
 
@@ -45,13 +42,11 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin.Controls {
 
             fckDescription.BasePath
                 = fckFeatures.BasePath
-                = fckKitComprises.BasePath
                 = fckShortDescription.BasePath
                 = this.Page.ResolveUrl("~/Support/FCKEditor/");
 
             if (!IsPostBack && product != null) {
 
-                chkIsKit.Checked = pnlKit.Visible = product.IsKit;
 
                 txtItemCode.Text = product.ItemCode;
                 txtProductName.Text = product.Name;
@@ -61,23 +56,16 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin.Controls {
                 txtPrice.Text = String.Format("{0:f2}", product.Price);
 
                 fckDescription.Value = product.Description;
-                fckKitComprises.Value = product.AdditionalInformation;
                 fckFeatures.Value = product.Features;
                 fckShortDescription.Value = product.ShortDescription;
 
-                txtProductFamily.Text = product.ProductFamily;
                 txtFinish.Text = product.GetValue("finish_type");
                 txtWeight.Text = product.GetValue("weight_kg");
             }
         }
 
         protected override void OnInit(EventArgs e) {
-            chkIsKit.CheckedChanged += new EventHandler(chkIsKit_CheckedChanged);
             base.OnInit(e);
-        }
-
-        void chkIsKit_CheckedChanged(object sender, EventArgs e) {
-            pnlKit.Visible = chkIsKit.Checked;
         }
     }
 }

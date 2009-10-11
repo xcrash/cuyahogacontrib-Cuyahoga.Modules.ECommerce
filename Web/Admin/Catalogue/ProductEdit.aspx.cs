@@ -187,10 +187,8 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
                 p.ItemCode = productEditor.txtItemCode.Text;
                 p.ProductName = productEditor.txtProductName.Text;
                 p.ProductDescription = productEditor.fckDescription.Value;
-                p.ProductFamily = productEditor.txtProductFamily.Text;
                 p.BasePriceDescription = productEditor.txtPriceDescription.Text;
                 p.IsPublished = true;
-                p.IsKit = productEditor.chkIsKit.Checked;
 
                 if (!string.IsNullOrEmpty(productEditor.txtPrice.Text)) {
                     try {
