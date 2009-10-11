@@ -1101,6 +1101,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Controls\ProductDetails.ascx">
+      <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Web\Controls\ProductImages.ascx">
       <SubType>ASPXCodeBehind</SubType>

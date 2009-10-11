@@ -13,20 +13,12 @@
         <asp:Image ID="imgStockedIndicator" runat="server" /> <asp:Literal ID="litStocked" runat="server"></asp:Literal>
         </p>
         <p><strong>Item Code:</strong>  <%# ((IProductSummary)Container.DataItem).ItemCode %></p> 
-       
-        
+               
        <strong>Short Summary:</strong> <%# ((IProductSummary)Container.DataItem).ShortDescription%>
        
         <strong>Extended Description:</strong> <%# ((IProductSummary)Container.DataItem).Description%>
         
       <h3> <asp:Literal ID="litPrice" runat="server"/> </h3>
- 
-        
-       
-         
-      
-        
-
          
     </ItemTemplate>
 </asp:Repeater>
