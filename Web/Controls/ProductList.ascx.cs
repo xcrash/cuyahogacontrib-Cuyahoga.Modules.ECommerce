@@ -112,7 +112,6 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
 
         private void Page_Load(object sender, System.EventArgs e) {
             CreateListNavigation();
-            pnlFilter.Visible = false;
         }
 
         public void CreateListNavigation() {

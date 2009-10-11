@@ -12,7 +12,7 @@
     
     <asp:Literal ID="litCategoryDescription" runat="server"></asp:Literal>
     
-    <asp:Panel ID="pnlFilter" runat="server">
+    <asp:Panel ID="pnlFilter" runat="server" Visible="false">
     <div class="sideBox">
         <table id="listOptions">
        <tr>

@@ -259,7 +259,6 @@ namespace Cuyahoga.Modules.ECommerce.Service {
 
         public DbProduct GetECommerceProduct(int storeID, string cultureCode, long productID) {
             return _dao.GetObjectById(typeof(DbProduct), productID) as DbProduct;
-            //this may have to change due to kits -- unless I put kits in their own Table
         }
 
         public DbProduct GetECommerceProduct(int storeID, string cultureCode, string productName) {

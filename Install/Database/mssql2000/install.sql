@@ -1500,3 +1500,17 @@ GO
 
 ALTER TABLE [ECommerce_Product] DROP COLUMN IsKit;
 GO
+ALTER procedure [dbo].[getFamilyRelatedProducts]    
+						  	  @productID bigint,    
+						  	  @relationshipType varchar(50) = 'CrossSell'    
+						  	      
+						  	  as      
+						  	      
+						  	  select distinct pcs.* from ecommerce_product pcs    
+						  	  inner join ECommerce_ProductRelation pr on pcs.productid = pr.productid    
+						  	  inner join ECommerce_RelationType rt on pr.relationtypeid = rt.relationtypeid    
+						  	  inner join ECommerce_Product p on pr.parentid = p.productid    
+						  	  where (p.productid = @productid) and rt.relationshipname = @relationshipType  
+						  	  order by pcs.itemcode;
+GO
+

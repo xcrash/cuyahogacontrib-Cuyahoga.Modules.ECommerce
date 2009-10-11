@@ -63,7 +63,7 @@ INSERT INTO [ECommerce_Category]
            ,[priceChangePercent]
            ,[bannerImageUrl])
      VALUES
-           ('Test Category ' +  CAST(newid() AS VARCHAR)
+           ('Test Category ' +  CAST(newid() AS nVARCHAR(4000))
            ,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempus vulputate urna, eu euismod ipsum ornare dignissim. Morbi hendrerit justo in felis varius volutpat. Nunc ut tellus lacus. Etiam aliquam, nibh eu feugiat porta, ante arcu condimentum metus, non elementum tortor felis id eros. Curabitur venenatis bibendum orci, vitae viverra dolor pulvinar vitae. Sed id purus est, in dignissim mi. Vivamus pretium dolor vitae dolor suscipit vel convallis nisi varius. Etiam sagittis ante non velit fringilla rutrum. Nunc eleifend fringilla consequat. Suspendisse nibh sapien, consequat eget aliquam ac, lacinia in ipsum. '
            ,@ROOT_ID
            ,0
@@ -103,7 +103,7 @@ SET @CAT_ID = @@identity
 						   ,[shortProductDescription])
 					 VALUES
 						   (newid()
-						   ,'Test Product ' +  CAST(newid() AS VARCHAR)
+						   ,'Test Product ' +  CAST(newid() AS nVARCHAR(4000))
 						   ,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempus vulputate urna, eu euismod ipsum ornare dignissim. Morbi hendrerit justo in felis varius volutpat. Nunc ut tellus lacus. Etiam aliquam, nibh eu feugiat porta, ante arcu condimentum metus, non elementum tortor felis id eros. Curabitur venenatis bibendum orci, vitae viverra dolor pulvinar vitae. Sed id purus est, in dignissim mi. Vivamus pretium dolor vitae dolor suscipit vel convallis nisi varius. Etiam sagittis ante non velit fringilla rutrum. Nunc eleifend fringilla consequat. Suspendisse nibh sapien, consequat eget aliquam ac, lacinia in ipsum.
 
 				Fusce eleifend malesuada nisi. Ut diam leo, ultrices porttitor elementum non, congue at leo. Nullam elit felis, mattis in vulputate ut, fermentum a est. Mauris eu leo non mauris dapibus ultricies sit amet sed ipsum. Mauris vitae mi in quam volutpat tristique. Pellentesque id elit sit amet lacus sagittis pretium nec eget augue. Donec malesuada lacus sed est gravida pharetra. Donec sed ipsum non augue congue ullamcorper id ut nisi. Nulla congue est nunc, vel egestas neque. Nullam sed sapien eu nisl scelerisque dapibus. Proin posuere dolor in quam tempor rhoncus.

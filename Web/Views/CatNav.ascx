@@ -14,6 +14,7 @@
 		    <img src="<%=BannerImageUrl%>" alt="<%=CatImageAltText%>" width="500px"/>
 	    </div>
 	</asp:Panel>
+	
 	<asp:repeater runat="server" id="rptCategories">
 	    <headertemplate><table id="categoryList"><tr></headertemplate>
 	    <itemtemplate>

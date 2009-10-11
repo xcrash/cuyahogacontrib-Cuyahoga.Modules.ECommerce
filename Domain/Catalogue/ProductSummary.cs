@@ -21,19 +21,11 @@ namespace Cuyahoga.Modules.ECommerce.Domain.Catalogue {
         private string _additionalInformation = "";
         private string _features = "";
         private string _productGroup = "";
-        private string _productFamily = "";
         private List<ProductSynonym> _synonymList = new List<ProductSynonym>();
         private string _priceDescription;
         private decimal _price;
-        private bool _isKit;
 
         public ProductSummary() {
-        }
-
-        public bool IsNewFamily(string oldFamily) {
-            return (string.IsNullOrEmpty(ProductFamily)
-                || string.IsNullOrEmpty(oldFamily)
-                || string.Compare(ProductFamily.Trim(), oldFamily.Trim(), true) != 0);
         }
 
         public ProductSummary(string itemCode, string description) {
@@ -104,15 +96,6 @@ namespace Cuyahoga.Modules.ECommerce.Domain.Catalogue {
             }
         }
 
-        public string ProductFamily {
-            get {
-                return _productFamily;
-            }
-            set {
-                _productFamily = value;
-            }
-        }
-
         public List<IImage> ProductImages {
             get {
                 return _productImages;
@@ -141,12 +124,6 @@ namespace Cuyahoga.Modules.ECommerce.Domain.Catalogue {
         public string PriceDescription {
             get { return _priceDescription; }
             set { _priceDescription = value; }
-        }
-
-        [XmlArrayItem(Type = typeof(bool))]
-        public bool IsKit {
-            get { return _isKit; }
-            set { _isKit = value; }
         }
     }
 }
