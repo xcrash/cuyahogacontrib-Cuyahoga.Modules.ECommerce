@@ -8,17 +8,15 @@
         <h3>
             <%# ((IProductSummary)Container.DataItem).Name%>
         </h3>
-        <p><strong>Avaliability:</strong>  
-        
-        <asp:Image ID="imgStockedIndicator" runat="server" /> <asp:Literal ID="litStocked" runat="server"></asp:Literal>
+        <p><strong>Avaliability:</strong><asp:Image ID="imgStockedIndicator" runat="server" /> <asp:Literal ID="litStocked" runat="server"></asp:Literal>
         </p>
-        <p><strong>Item Code:</strong>  <%# ((IProductSummary)Container.DataItem).ItemCode %></p> 
-               
-       <strong>Short Summary:</strong> <%# ((IProductSummary)Container.DataItem).ShortDescription%>
-       
-        <strong>Extended Description:</strong> <%# ((IProductSummary)Container.DataItem).Description%>
         
-      <h3> <asp:Literal ID="litPrice" runat="server"/> </h3>
+        <p><strong>Item Code:</strong>  <%# ((IProductSummary)Container.DataItem).ItemCode %></p> 
+        
+        <h3> <asp:Literal ID="litPrice" runat="server"/> </h3>
+        <strong>Description:</strong> <%# ((IProductSummary)Container.DataItem).Description%>
+        
+
          
     </ItemTemplate>
 </asp:Repeater>

@@ -24,7 +24,6 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
 
         protected void Page_Load(object sender, EventArgs e) {
             
-            
         }
 
         public void RenderProductDetails(List<IProduct> prodView) {

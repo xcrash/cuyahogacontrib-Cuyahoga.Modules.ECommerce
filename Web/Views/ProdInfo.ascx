@@ -50,7 +50,15 @@
 		
 	</div>
 </div>
+
+<div class="mainbox feature clear">
+<div class="boxhead"><h2>Features</h2></div>
+		
+			
+		<div class="boxbody">
+	<%=prodView.ProductDetails.Features%>
 	
+	</div></div>
 </div>
 	
 	
