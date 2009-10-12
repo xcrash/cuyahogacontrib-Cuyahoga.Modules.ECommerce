@@ -10,12 +10,56 @@
 <%@ Register tagPrefix="lc" Tagname="Attributes" src="..\Controls\Attributes.ascx"%>
 <%@ Register tagPrefix="lc" Tagname="Details" src="..\Controls\ProductDetails.ascx"%>
 
+
 <lc:breadcrumb runat="server" id="ctlBreadCrumb" />
+
 <div id="productLeft">
+
 <lc:ProductImages runat="server" id="ctlImages" />
 
-
-	<div id="buy" class="mainbox feature form">
+<div class="tab-container" id="container1">
+	<ul id="sections">
+		<li><a href="#" onClick="return showPane('pane1', this)" id="tab1">Product Attributes</a></li>
+		<li><a href="#" onClick="return showPane('pane2', this)" id="tab2">Related Products</a></li>
+		<li><a href="#" onClick="return showPane('pane4', this)" id="tab4">PDF's</a></li>
+	</ul>
+	<div class="rounded">
+		<div class="tab-panes">
+			<div id="pane1">
+				<h2>Configure Product</h2>
+				      <div class="mainbox openbox list">
+                         <lc:Attributes runat="server" id="ctlAttributes" />
+                     </div>
+			</div>
+			<div id="pane2">
+				<h2>Related Products</h2>
+				<div class="mainbox openbox list">
+				<lc:RelatedProducts runat="server" id="ctlRelatedProducts" />
+				</div>
+			</div>
+			<div id="pane4">
+				<h2>Related Documents</h2>
+				<div class="mainbox openbox list">
+				<p><a href="http://store.norgren.com/resources/sku/CompactViewUK/0000000001/44.pdf" class="pdf" target="new">Actuators/N1_5_135.pdf</a></p>
+				<lc:RelatedDocuments runat="server" id="ctlRelatedDocuments" />
+				</div>
+			</div> 
+			
+			
+		</div>
+		
+	</div>
+</div>
+	
+</div>
+	
+	
+	
+	
+	<div id="productDetails">
+    <lc:Details runat="server" id="ctlDetails" />
+    
+ <div id="buy" class="mainbox feature form">
 	
 		<div class="boxhead"><h2>Ordering Instructions</h2></div>
 		
@@ -61,54 +105,10 @@
 		
 		
 	</div>
-	</div>
-	<div id="productDetails">
-    <lc:Details runat="server" id="ctlDetails" />
-    
- 
     
 
 </div>
-<div class="tab-container" id="container1">
-	<ul id="sections">
-		<li><a href="#" onClick="return showPane('pane1', this)" id="tab1">Product Attributes</a></li>
-		<li><a href="#" onClick="return showPane('pane2', this)" id="tab2">Related Products</a></li>
-		<li><a href="#" onClick="return showPane('pane4', this)" id="tab4">PDF's</a></li>
-	</ul>
-	<div class="rounded">
-		<div class="tab-panes">
-			<div id="pane1">
-				<h2>Configure Product</h2>
-				      <div class="mainbox openbox list">
-                         <lc:Attributes runat="server" id="ctlAttributes" />
-                     </div>
-			</div>
-			<div id="pane2">
-				<h2>Related Products</h2>
-				<div class="mainbox openbox list">
-				<lc:RelatedProducts runat="server" id="ctlRelatedProducts" />
-				</div>
-			</div>
-			<div id="pane4">
-				<h2>Related Documents</h2>
-				<div class="mainbox openbox list">
-				<p><a href="http://store.norgren.com/resources/sku/CompactViewUK/0000000001/44.pdf" class="pdf" target="new">Actuators/N1_5_135.pdf</a></p>
-				<lc:RelatedDocuments runat="server" id="ctlRelatedDocuments" />
-				</div>
-			</div> 
-			
-			
-		</div>
-		
-	</div>
-</div>
 
 
 
-
-<br />
-
-
-
-
-
+<div class="clear" />

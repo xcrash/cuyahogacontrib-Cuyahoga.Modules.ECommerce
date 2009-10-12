@@ -27,7 +27,9 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
         protected HyperLink hplImagePopUp3;
 
         protected void Page_Load(object sender, EventArgs e) {
-
+            imgProduct.ImageUrl = String.Concat(AppPath, "modules/ECommerce/images/no-image.jpg");
+            imgProduct2.ImageUrl = String.Concat(AppPath, "modules/ECommerce/images/no-image.jpg");
+            imgProduct3.ImageUrl = String.Concat(AppPath, "modules/ECommerce/images/no-image.jpg");
         }
 
         public void RenderProductImages(List<IImage> imageList) {
