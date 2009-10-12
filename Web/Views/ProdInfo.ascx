@@ -27,19 +27,19 @@
 		<div class="tab-panes">
 			<div id="pane1">
 				<h2>Configure Product</h2>
-				      <div class="mainbox openbox list">
+				      <div class="openbox list">
                          <lc:Attributes runat="server" id="ctlAttributes" />
                      </div>
 			</div>
 			<div id="pane2">
 				<h2>Related Products</h2>
-				<div class="mainbox openbox list">
+				<div class="openbox list">
 				<lc:RelatedProducts runat="server" id="ctlRelatedProducts" />
 				</div>
 			</div>
 			<div id="pane4">
 				<h2>Related Documents</h2>
-				<div class="mainbox openbox list">
+				<div class="openbox list">
 				<p><a href="http://store.norgren.com/resources/sku/CompactViewUK/0000000001/44.pdf" class="pdf" target="new">Actuators/N1_5_135.pdf</a></p>
 				<lc:RelatedDocuments runat="server" id="ctlRelatedDocuments" />
 				</div>
@@ -85,7 +85,7 @@
 			</thead>
 			<tbody>
 			<tr>
-				<td class="first"><h5><%=prodView.ProductDetails.ItemCode%></h5>Straight Connector 4mm O/D tube</td>
+				<td class="first"><h5><%=prodView.ProductDetails.ItemCode%></h5></td>
 
 				
 				<td><asp:Literal runat="server" ID="litStocked"></asp:Literal></td>
