@@ -59,6 +59,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
                 if (CatMod.ProductID > 0) {
                     prodView = CatMod.CatalogueViewer.GetProductView(CatMod.Section.Node.Site.Id, CatMod.Section.Node.Culture, CatMod.ProductID);
                 } else {
+                  
                     DbProduct prod = CatMod.CatalogueViewer.GetECommerceProductByItemCode(CatMod.Section.Node.Site.Id, CatMod.Section.Node.Culture, CatMod.Sku);
                     if (prod != null) {
                         prodView = CatMod.CatalogueViewer.GetProductView(CatMod.Section.Node.Site.Id, CatMod.Section.Node.Culture, prod.ProductID);
@@ -66,20 +67,22 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
                 }
                 
                 if (prodView != null) {
+
                     List<IProduct> prodList = new List<IProduct>();
                     prodList.Add(prodView.ProductDetails);
-                    
+                   
                     RenderProductDetails(prodList);
                     RenderBreadCrumbTrail(prodView);
                     txtProdID.Text = Convert.ToString(prodView.ProductDetails.ProductID);
+
                     ctlImages.RenderProductImages(prodView.ProductDetails.ProductImages);
+                    ctlRelatedProducts.RenderRelatedProducts(prodView.ProductDetails);
 
                     if (Convert.ToBoolean(prodView.ProductDetails.StockedIndicator)) {
                         litStocked.Text = ITEM_STOCKED;
                     } else {
                         litStocked.Text = ITEM_NOT_STOCKED;
                     }
-
                 }
 
             } catch (System.Threading.ThreadAbortException) {
@@ -98,8 +101,8 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
             }
         }
 
-        protected string GetProductUrl(IRelatedProducts product) {
-            return UrlHelper.GetProductUrl(product.AccessoryPartNo);
+        protected string GetProductUrl(IProduct product) {
+            return UrlHelper.GetProductUrl(product.ItemCode);
         }
 
         protected void AddToBasket(object sender, EventArgs e) {

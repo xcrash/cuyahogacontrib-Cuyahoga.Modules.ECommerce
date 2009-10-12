@@ -228,7 +228,7 @@ namespace Cuyahoga.Modules.ECommerce {
 
         public string CatalogueUrlRoot {
             get {
-                return "http://store.norgren.com"; // ermmm what?
+                return "/"; // ermmm what?
             }
         }
 

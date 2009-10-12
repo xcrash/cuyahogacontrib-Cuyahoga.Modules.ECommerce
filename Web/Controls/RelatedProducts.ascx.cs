@@ -17,25 +17,37 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
 
     public partial class RelatedProducts : LocalizedModuleConsumerControl {
        
-        public List<IRelatedProducts> crossSellList;
-        public List<IRelatedProducts> upSellList;
-
         protected System.Web.UI.WebControls.Repeater rptCrossSell;
         protected System.Web.UI.WebControls.Repeater rptUpSell;
 
         protected CatalogueUrlHelper UrlHelper;
 
+        private CatalogueViewModule _mod;
+        private CatalogueViewModule CatMod {
+            get {
+                if (_mod == null) {
+                    _mod = Module as CatalogueViewModule;
+                }
+                return _mod;
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e) {
-            if (crossSellList != null) {
-                if (crossSellList.Count > 0) {
-                    rptCrossSell.DataSource = crossSellList;
+            
+        }
+
+        public void RenderRelatedProducts(IProduct product) {
+            UrlHelper = new CatalogueUrlHelper(CatMod);
+            if (product != null && product.CrossSellList != null) {
+               
+                if (product.CrossSellList.Count > 0) {
+                    rptCrossSell.DataSource = product.CrossSellList;
                     rptCrossSell.DataBind();
                 }
             }
-            if (upSellList != null) {
-                if (upSellList.Count > 0) {
-
-                    rptUpSell.DataSource = upSellList;
+            if (product != null && product.UpSellList != null) {
+                if (product.UpSellList.Count > 0) {
+                    rptUpSell.DataSource = product.UpSellList;
                     rptUpSell.DataBind();
                 }
             }
@@ -43,8 +55,8 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
 
         public string GetProductID(string itemCode) {
 
-            return "625";//catModule.CatalogueViewer.GetECommerceProductByItemCode(catModule.Section.Node.Site.Id, catModule.Section.Node.Culture, itemCode).ProductID.ToString();
+            return "625";
+            //catModule.CatalogueViewer.GetECommerceProductByItemCode(catModule.Section.Node.Site.Id, catModule.Section.Node.Culture, itemCode).ProductID.ToString();
         }
-
     }
 }

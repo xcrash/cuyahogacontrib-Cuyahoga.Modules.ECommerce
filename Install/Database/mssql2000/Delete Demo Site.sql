@@ -1,6 +1,6 @@
-
+USE CuyahogaECommerceDemov3
 DECLARE @SITE_ID int
-SET @SITE_ID =  11
+SET @SITE_ID =  8
 
 
 				DELETE cuyahoga_noderole

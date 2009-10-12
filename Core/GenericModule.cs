@@ -29,6 +29,9 @@ namespace Cuyahoga.Modules.ECommerce.Core {
             RequestParameters = new NameValueCollection();
 
             string[] parameters = ModuleParams;
+           // if (HttpContext.Current != null && parameters != null) {
+             //   HttpContext.Current.Response.Redirect(parameters[parameters.Length - 1]);
+          //  }
             if (parameters != null) {
                 for (int i = 0; i < parameters.Length - 1; i += 2) {
                     RequestParameters.Add(parameters[i], ParameterEncoder.DecodeParameterValue(parameters[i + 1]));

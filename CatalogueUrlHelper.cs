@@ -57,14 +57,6 @@ namespace Cuyahoga.Modules.ECommerce {
             return _module.GetUrl(paramList);
         }
 
-        public virtual string GetUrlForKitProductList(long kitID) {
-            NameValueCollection paramList = GetBaseParamList();
-            paramList.Add(GenericModule.PARAM_VIEW_NAME, VIEW_KIT_PRODUCT_LIST);
-            paramList.Add(CatalogueViewModule.PARAM_KIT_ID, kitID.ToString());
-
-            return _module.GetUrl(paramList);
-        }
-
 		public virtual string GetCatalogueNodeUrl(ITrailItem node) {
 			return GetCatalogueNodeUrl(node.NodeID);
 		}
@@ -89,10 +81,10 @@ namespace Cuyahoga.Modules.ECommerce {
             } else {
                 try {
                     return GetCatalogueNodeUrl(_module.CatalogueViewer.GetRootCategoryView(_module.Section.Node.Site.Id, _module.Section.Node.Culture).CurrentNode.NodeID);
-                } catch {
-                    return "";
-                }
+                } catch { }
             }
+
+            return string.Empty;
         }
 
         public virtual string GetProductUrl(long productID) {
@@ -104,12 +96,12 @@ namespace Cuyahoga.Modules.ECommerce {
 			return _module.GetUrl(paramList);
 		}
 
-        public virtual string GetProductUrl(string productID) {
+        public virtual string GetProductUrl(string sku) {
             
             NameValueCollection paramList = GetBaseParamList();
             paramList.Add(GenericModule.PARAM_VIEW_NAME, VIEW_PRODUCT);
-            paramList.Add(CatalogueViewModule.PARAM_PRODUCT_SKU, productID);
-
+            paramList.Add(CatalogueViewModule.PARAM_PRODUCT_SKU, ParameterEncoder.EncodeParameterValue(sku));
+        //    HttpContext.Current.Response.Redirect(ParameterEncoder.EncodeParameterValue(sku));
             return _module.GetUrl(paramList);
         }
 

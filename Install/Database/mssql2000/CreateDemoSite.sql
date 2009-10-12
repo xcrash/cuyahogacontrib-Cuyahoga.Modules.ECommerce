@@ -1,4 +1,4 @@
-
+USE CuyahogaECommerceDemov3
 INSERT INTO [dbo].[cuyahoga_template]
 		           ([name]
 		           ,[basepath]
