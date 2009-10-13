@@ -3,15 +3,12 @@
 
 <asp:Repeater ID="rptDocuments" runat="server">
     <HeaderTemplate>
-        <h3>Related Documents</h3>
+    <ul>
     </HeaderTemplate>
     <ItemTemplate>
-      <h4> <%#((IRelatedDocument) Container.DataItem).Name%></h4>
-       
-       <a href="<%#((IRelatedDocument) Container.DataItem).Url%>">Download</a>
-        
-       <p><%#((IRelatedDocument) Container.DataItem).Description%></p>
+      <li> <a href="<%#((IRelatedDocument) Container.DataItem).Url%>"> <%#((IRelatedDocument) Container.DataItem).Name%></a></li>
     </ItemTemplate>
     <FooterTemplate>
+    </ul>
     </FooterTemplate>
 </asp:Repeater>

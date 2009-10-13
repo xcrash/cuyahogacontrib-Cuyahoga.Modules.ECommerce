@@ -21,7 +21,7 @@
 	<ul id="sections">
 		<li><a href="#" onClick="return showPane('pane1', this)" id="tab1">Product Attributes</a></li>
 		<li><a href="#" onClick="return showPane('pane2', this)" id="tab2">Related Products</a></li>
-		<li><a href="#" onClick="return showPane('pane4', this)" id="tab4">PDF's</a></li>
+		<li><a href="#" onClick="return showPane('pane4', this)" id="tab4">Related Documents</a></li>
 	</ul>
 	<div class="rounded">
 		<div class="tab-panes">
@@ -40,8 +40,8 @@
 			<div id="pane4">
 				<h2>Related Documents</h2>
 				<div class="openbox list">
-				<p><a href="http://store.norgren.com/resources/sku/CompactViewUK/0000000001/44.pdf" class="pdf" target="new">Actuators/N1_5_135.pdf</a></p>
-				<lc:RelatedDocuments runat="server" id="ctlRelatedDocuments" />
+				
+				<lc:RelatedDocuments runat="server" id="ctlDocuments" />
 				</div>
 			</div> 
 			

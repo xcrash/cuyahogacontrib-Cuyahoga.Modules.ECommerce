@@ -13,21 +13,37 @@ using Cuyahoga.Modules.ECommerce.Util.Interfaces;
 using Cuyahoga.Modules.ECommerce.Domain.Catalogue;
 
 namespace Cuyahoga.Modules.ECommerce.Web.Controls {
+
     public class Attributes : LocalizedModuleConsumerControl {
 
-        protected void Page_Load(object sender, EventArgs e) {
+        protected CatalogueUrlHelper UrlHelper;
 
-          /*  
-            
-            
-            
-            */
-
-        
+        private CatalogueViewModule _mod;
+        private CatalogueViewModule CatMod {
+            get {
+                if (_mod == null) {
+                    _mod = Module as CatalogueViewModule;
+                }
+                return _mod;
+            }
         }
 
-       
+        protected System.Web.UI.WebControls.Repeater rptDocuments;
 
+        protected void Page_Load(object sender, EventArgs e) {
+        }
+
+        public void RenderAttributes(IProduct product) {
+
+            UrlHelper = new CatalogueUrlHelper(CatMod);
+
+            if (product != null && product.DocumentList != null) {
+                if (product.DocumentList.Count > 0) {
+                    rptDocuments.DataSource = product.DocumentList;
+                    rptDocuments.DataBind();
+                }
+            }
+        }
 
 
         #region Web Form Designer generated code

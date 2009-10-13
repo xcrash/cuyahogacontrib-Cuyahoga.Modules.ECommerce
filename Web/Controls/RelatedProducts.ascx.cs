@@ -37,6 +37,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
         }
 
         public void RenderRelatedProducts(IProduct product) {
+            
             UrlHelper = new CatalogueUrlHelper(CatMod);
             if (product != null && product.CrossSellList != null) {
                
@@ -51,12 +52,6 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
                     rptUpSell.DataBind();
                 }
             }
-        }
-
-        public string GetProductID(string itemCode) {
-
-            return "625";
-            //catModule.CatalogueViewer.GetECommerceProductByItemCode(catModule.Section.Node.Site.Id, catModule.Section.Node.Culture, itemCode).ProductID.ToString();
         }
     }
 }

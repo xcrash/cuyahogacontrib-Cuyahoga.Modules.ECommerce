@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using Cuyahoga.Modules.ECommerce.Util.Enums;
@@ -13,15 +12,31 @@ using Cuyahoga.Modules.ECommerce.Util.Interfaces;
 
 
 namespace Cuyahoga.Modules.ECommerce.Web.Controls {
+
     public partial class RelatedDocuments : LocalizedModuleConsumerControl {
 
-        public List<IRelatedDocument> documentList;
+        protected CatalogueUrlHelper UrlHelper;
+
+        private CatalogueViewModule _mod;
+        private CatalogueViewModule CatMod {
+            get {
+                if (_mod == null) {
+                    _mod = Module as CatalogueViewModule;
+                }
+                return _mod;
+            }
+        }
+
         protected System.Web.UI.WebControls.Repeater rptDocuments;
 
         protected void Page_Load(object sender, EventArgs e) {
-            if (documentList != null) {
-                if (documentList.Count > 0) {
-                    rptDocuments.DataSource = documentList;
+        }
+
+        public void RenderDocuments(IProduct product) {
+            UrlHelper = new CatalogueUrlHelper(CatMod);
+            if (product != null && product.DocumentList != null) {
+                if (product.DocumentList.Count > 0) {
+                    rptDocuments.DataSource = product.DocumentList;
                     rptDocuments.DataBind();
                 }
             }

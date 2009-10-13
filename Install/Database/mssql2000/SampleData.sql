@@ -1,5 +1,5 @@
 
-USE CuyahogaECommerceDemov3
+USE CuyahogaECommerceDemov2
 DECLARE @RelatedID_1 int 
 DECLARE @RelatedID_2 int 
 DECLARE @RelatedID_3 int 

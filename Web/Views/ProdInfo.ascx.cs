@@ -77,6 +77,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
 
                     ctlImages.RenderProductImages(prodView.ProductDetails.ProductImages);
                     ctlRelatedProducts.RenderRelatedProducts(prodView.ProductDetails);
+                    ctlDocuments.RenderDocuments(prodView.ProductDetails);
 
                     if (Convert.ToBoolean(prodView.ProductDetails.StockedIndicator)) {
                         litStocked.Text = ITEM_STOCKED;
