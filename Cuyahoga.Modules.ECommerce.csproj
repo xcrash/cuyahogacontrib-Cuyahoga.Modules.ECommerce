@@ -1392,8 +1392,7 @@ set MOD_ADMIN_IMAGE_PATH=Modules\ECommerce\Admin\Images
 xcopy /y /r /d "$(TargetDir)$(TargetName).dll" "%25CUY_DIR%25\bin\"
 xcopy /y /r /d "$(TargetDir)$(TargetName).pdb" "%25CUY_DIR%25\bin\"
 
-rem TODO
-rem rem xcopy /y /r /d "$(ProjectDir)CuyahogaModifications\Templates\ECommerce\Css\*.css" "%25CUY_DIR%25\%25MOD_TEMPLATE_PATH%25\"
+xcopy /y /r /d "$(ProjectDir)CuyahogaModifications\Config\*.config" "%25CUY_DIR%25\Config\"
 
 copy /y "$(ProjectDir)web\Controls\resources\Strings.resx" "%25CUY_DIR%25\App_GlobalResources\$(TargetName).resx"
 
