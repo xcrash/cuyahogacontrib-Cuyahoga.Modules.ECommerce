@@ -53,7 +53,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Paymentid {
+        protected internal virtual long _Paymentid {
             get { return _paymentid; }
             set { _paymentid = value; }
         }
@@ -61,7 +61,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual Basket _Basketid {
+        protected internal virtual Basket _Basketid {
             get { return _basketid; }
             set { _basketid = value; }
         }
@@ -69,7 +69,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual short _PaymentTypeid {
+        protected internal virtual short _PaymentTypeid {
             get { return _paymenttypeid; }
             set { _paymenttypeid = value; }
         }
@@ -77,7 +77,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual short _PaymentStatusid {
+        protected internal virtual short _PaymentStatusid {
             get { return _paymentstatusid; }
             set { _paymentstatusid = value; }
         }
@@ -85,7 +85,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual decimal _Amount {
+        protected internal virtual decimal _Amount {
             get { return _amountDecimal; }
             set { _amountDecimal = value; _amountMoney = null; }
         }
@@ -93,7 +93,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -101,7 +101,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }
@@ -212,7 +212,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
 
         #region IPaymentRecord Members
 
-        public PaymentMethodTypeEnum PaymentMethod {
+        public virtual PaymentMethodTypeEnum PaymentMethod {
             get {
                 return (PaymentMethodTypeEnum)_paymenttypeid;
             }
@@ -247,7 +247,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public string TransactionReference {
+        public virtual string TransactionReference {
             get {
                 return _transactionReference;
             }
@@ -256,7 +256,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public PaymentStatus TransactionStatus {
+        public virtual PaymentStatus TransactionStatus {
             get {
                 return (PaymentStatus)_PaymentStatusid;
             }
@@ -265,7 +265,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public DateTime PaymentDate {
+        public virtual DateTime PaymentDate {
             get {
                 return _inserttimestamp;
             }
@@ -274,7 +274,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public short PaymentProviderID {
+        public virtual short PaymentProviderID {
             get {
                 return _paymentProviderID;
             }

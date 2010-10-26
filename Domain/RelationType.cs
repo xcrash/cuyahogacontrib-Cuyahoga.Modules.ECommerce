@@ -39,7 +39,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual short _RelationTypeid
+		protected internal virtual short _RelationTypeid
 		{
 			get { return _relationtypeid; }
 			set { _relationtypeid = value; }
@@ -48,7 +48,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual string _RelationshipName
+		protected internal virtual string _RelationshipName
 		{
 			get { return _relationshipname; }
 			set { _relationshipname = value; }
@@ -57,7 +57,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual string _RelationshipDescription
+		protected internal virtual string _RelationshipDescription
 		{
 			get { return _relationshipdescription; }
 			set { _relationshipdescription = value; }

@@ -124,7 +124,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 				/// <summary>
 				/// 
 				/// </summary>
-				internal virtual short _AttributeGroupid
+				protected internal virtual short _AttributeGroupid
 				{
 					get { return _attributegroupid; }
 					set { _attributegroupid = value; }
@@ -133,7 +133,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 				/// <summary>
 				/// 
 				/// </summary>
-				internal virtual int _Attributeid
+				protected internal virtual int _Attributeid
 				{
 					get { return _attributeid; }
 					set { _attributeid = value; }
@@ -142,7 +142,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 				/// <summary>
 				/// 
 				/// </summary>
-				internal virtual DateTime _Inserttimestamp
+				protected internal virtual DateTime _Inserttimestamp
 				{
 					get { return _inserttimestamp; }
 					set { _inserttimestamp = value; }
@@ -151,7 +151,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 				/// <summary>
 				/// 
 				/// </summary>
-				internal virtual DateTime _Updatetimestamp
+				protected internal virtual DateTime _Updatetimestamp
 				{
 					get { return _updatetimestamp; }
 					set { _updatetimestamp = value; }

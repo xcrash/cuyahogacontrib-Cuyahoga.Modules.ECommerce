@@ -53,7 +53,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _PurchaseOrderNumber {
+        protected internal virtual string _PurchaseOrderNumber {
             get { return _purchaseordernumber; }
             set { _purchaseordernumber = value; }
         }
@@ -61,12 +61,12 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual short _OrderStatusID {
+        protected internal virtual short _OrderStatusID {
             get { return _orderstatusid; }
             set { _orderstatusid = value; }
         }
 
-        internal virtual short _PaymentMethodID {
+        protected internal virtual short _PaymentMethodID {
             get { return _paymentmethodid; }
             set { _isChanged |= (_paymentmethodid != value); _paymentmethodid = value; }
         }
@@ -74,7 +74,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _OrderedDate {
+        protected internal virtual DateTime _OrderedDate {
             get { return _ordereddate; }
             set { _ordereddate = value; }
         }
@@ -82,7 +82,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual Address _InvoiceAddress {
+        protected internal virtual Address _InvoiceAddress {
             get { return _invoiceAddress; }
             set { _invoiceAddress = value; }
         }
@@ -90,7 +90,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual Address _DeliveryAddress {
+        protected internal virtual Address _DeliveryAddress {
             get { return _deliveryAddress; }
             set { _deliveryAddress = value; }
         }
@@ -98,7 +98,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DeliveryType _DeliveryTypeid {
+        protected internal virtual DeliveryType _DeliveryTypeid {
             get { return _deliverytypeid; }
             set { _deliverytypeid = value; }
         }
@@ -106,7 +106,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _Comment {
+        protected internal virtual string _Comment {
             get { return _comment; }
             set { _comment = value; }
         }
@@ -114,7 +114,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -122,7 +122,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }
@@ -267,7 +267,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         
         #region IGenericOrderHeader Members
 
-        public long OrderHeaderID {
+        public virtual long OrderHeaderID {
             get {
                 return _orderHeaderID;
             }
@@ -276,7 +276,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public PaymentMethodType PaymentMethod {
+        public virtual PaymentMethodType PaymentMethod {
             get {
                 return (PaymentMethodType)_paymentmethodid;
             }

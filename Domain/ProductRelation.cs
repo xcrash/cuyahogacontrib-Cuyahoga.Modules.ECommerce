@@ -40,7 +40,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Productid {
+        protected internal virtual long _Productid {
             get { return _productid; }
             set { _productid = value; }
         }
@@ -48,7 +48,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Parentid {
+        protected internal virtual long _Parentid {
             get { return _parentid; }
             set { _parentid = value; }
         }
@@ -56,7 +56,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual RelationType _RelationTypeid {
+        protected internal virtual RelationType _RelationTypeid {
             get { return _relationtypeid; }
             set { _relationtypeid = value; }
         }
@@ -64,7 +64,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -72,7 +72,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }

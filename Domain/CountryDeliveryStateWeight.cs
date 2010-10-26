@@ -43,7 +43,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual short _Stateid
+		protected internal virtual short _Stateid
 		{
 			get { return _stateid; }
 			set { _stateid = value; }
@@ -52,7 +52,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual short _WeightLevel
+		protected internal virtual short _WeightLevel
 		{
 			get { return _weightlevel; }
 			set { _weightlevel = value; }
@@ -61,7 +61,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual decimal _Price
+		protected internal virtual decimal _Price
 		{
 			get { return _price; }
 			set { _price = value; }
@@ -70,7 +70,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Inserttimestamp
+		protected internal virtual DateTime _Inserttimestamp
 		{
 			get { return _inserttimestamp; }
 			set { _inserttimestamp = value; }
@@ -79,7 +79,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Updatetimestamp
+		protected internal virtual DateTime _Updatetimestamp
 		{
 			get { return _updatetimestamp; }
 			set { _updatetimestamp = value; }

@@ -43,7 +43,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual short _DeliveryTypeid
+		protected internal virtual short _DeliveryTypeid
 		{
 			get { return _deliverytypeid; }
 			set { _deliverytypeid = value; }
@@ -52,7 +52,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual string _Name
+		protected internal virtual string _Name
 		{
 			get { return _name; }
 			set { _name = value; }
@@ -61,7 +61,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual bool _Status
+		protected internal virtual bool _Status
 		{
 			get { return _status; }
 			set { _status = value; }
@@ -70,7 +70,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Inserttimestamp
+		protected internal virtual DateTime _Inserttimestamp
 		{
 			get { return _inserttimestamp; }
 			set { _inserttimestamp = value; }
@@ -79,7 +79,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Updatetimestamp
+		protected internal virtual DateTime _Updatetimestamp
 		{
 			get { return _updatetimestamp; }
 			set { _updatetimestamp = value; }

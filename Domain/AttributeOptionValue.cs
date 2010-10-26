@@ -33,7 +33,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual Attribute _Attributeid {
+        protected internal virtual Attribute _Attributeid {
             get { return _attributeid; }
             set { _attributeid = value; }
         }
@@ -41,7 +41,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Optionid {
+        protected internal virtual long _Optionid {
             get { return _optionid; }
             set { _optionid = value; }
         }
@@ -49,12 +49,12 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _OptionName {
+        protected internal virtual string _OptionName {
             get { return _optionname; }
             set { _optionname = value; }
         }
 
-        internal virtual string _OptionData {
+        protected internal virtual string _OptionData {
             get { return _optionData; }
             set { _optionData = value; }
         }

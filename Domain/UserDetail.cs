@@ -47,7 +47,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Userid {
+        protected internal virtual long _Userid {
             get { return _userid; }
             set { _userid = value; }
         }
@@ -55,7 +55,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual Int16 _AccountTypeID {
+        protected internal virtual Int16 _AccountTypeID {
             get { return _accounttypeid; }
             set { _accounttypeid = value; }
         }
@@ -63,7 +63,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual Address _Addressid {
+        protected internal virtual Address _Addressid {
             get { return _addressid; }
             set { _addressid = value; }
         }
@@ -71,7 +71,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -79,7 +79,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }

@@ -51,7 +51,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual int _Imageid {
+        protected internal virtual int _Imageid {
             get { return _imageid; }
             set { _imageid = value; }
         }
@@ -59,7 +59,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual Product _Productid {
+        protected internal virtual Product _Productid {
             get { return _productid; }
             set { _productid = value; }
         }
@@ -67,7 +67,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _ImageUrl {
+        protected internal virtual string _ImageUrl {
             get { return _imageurl; }
             set { _imageurl = value; }
         }
@@ -75,7 +75,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual short? _Width {
+        protected internal virtual short? _Width {
             get { return _width; }
             set { _width = value; }
         }
@@ -83,7 +83,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual short? _Height {
+        protected internal virtual short? _Height {
             get { return _height; }
             set { _height = value; }
         }
@@ -91,7 +91,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _AltText {
+        protected internal virtual string _AltText {
             get { return _alttext; }
             set { _alttext = value; }
         }
@@ -99,7 +99,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual short _ImageType {
+        protected internal virtual short _ImageType {
             get { return _imagetype; }
             set { _imagetype = value; }
         }
@@ -107,7 +107,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -115,7 +115,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }
@@ -162,7 +162,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             set { _isChanged |= (_width != value); _width = value; }
         }
 
-        public bool WidthSpecified {
+        public virtual bool WidthSpecified {
             get { return _width != null; }
             set { }
         }
@@ -175,7 +175,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             set { _isChanged |= (_height != value); _height = value; }
         }
 
-        public bool HeightSpecified {
+        public virtual bool HeightSpecified {
             get { return _height != null; }
             set { }
         }

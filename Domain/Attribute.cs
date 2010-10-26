@@ -44,7 +44,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Attributeid {
+        protected internal virtual long _Attributeid {
             get { return _attributeid; }
             set { _attributeid = value; }
         }
@@ -52,7 +52,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _AttributeReference {
+        protected internal virtual string _AttributeReference {
             get { return _attributereference; }
             set { _attributereference = value; }
         }
@@ -60,7 +60,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _AttributeDescription {
+        protected internal virtual string _AttributeDescription {
             get { return _attributedescription; }
             set { _attributedescription = value; }
         }
@@ -68,7 +68,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual bool? _IsDisplayable {
+        protected internal virtual bool? _IsDisplayable {
             get { return _isdisplayable; }
             set { _isdisplayable = value; }
         }
@@ -76,12 +76,12 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _BaseUnit {
+        protected internal virtual string _BaseUnit {
             get { return _baseunit; }
             set { _baseunit = value; }
         }
 
-        internal virtual int _TypeID {
+        protected internal virtual int _TypeID {
             get { return _typeID; }
             set { _typeID = value; }
         }

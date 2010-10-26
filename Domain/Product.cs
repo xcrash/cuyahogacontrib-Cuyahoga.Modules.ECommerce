@@ -70,7 +70,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Productid {
+        protected internal virtual long _Productid {
             get { return _productid; }
             set { _productid = value; }
         }
@@ -78,7 +78,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _ItemCode {
+        protected internal virtual string _ItemCode {
             get { return _itemcode; }
             set { _itemcode = value; }
         }
@@ -86,7 +86,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _ProductName {
+        protected internal virtual string _ProductName {
             get { return _productname; }
             set { _productname = value; }
         }
@@ -94,12 +94,12 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _ProductDescription {
+        protected internal virtual string _ProductDescription {
             get { return _productdescription; }
             set { _productdescription = value; }
         }
 
-        internal virtual string _AdditionalInformation {
+        protected internal virtual string _AdditionalInformation {
             get { return _additionalInformation; }
             set { _additionalInformation = value; }
         }
@@ -107,7 +107,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual int _StockLevel {
+        protected internal virtual int _StockLevel {
             get { return _stocklevel; }
             set { _stocklevel = value; }
         }
@@ -115,7 +115,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual bool _IsPublished {
+        protected internal virtual bool _IsPublished {
             get { return _ispublished; }
             set { _ispublished = value; }
         }
@@ -123,7 +123,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual decimal _BasePrice {
+        protected internal virtual decimal _BasePrice {
             get { return _baseprice; }
             set { _baseprice = value; }
         }
@@ -132,7 +132,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -140,22 +140,22 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }
 
-        internal virtual IList _Images {
+        protected internal virtual IList _Images {
             get { return _images; }
             set { _images = value; }
         }
 
-        internal virtual IList _Documents {
+        protected internal virtual IList _Documents {
             get { return _documents; }
             set { _documents = value; }
         }
 
-        internal virtual IList _Synonyms {
+        protected internal virtual IList _Synonyms {
             get { return _synonyms; }
             set { _synonyms = value; }
         }

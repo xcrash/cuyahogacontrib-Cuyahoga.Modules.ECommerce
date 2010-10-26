@@ -41,7 +41,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual string _Sku
+		protected internal virtual string _Sku
 		{
 			get { return _sku; }
 			set { _sku = value; }
@@ -50,7 +50,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual Product _Productid
+		protected internal virtual Product _Productid
 		{
 			get { return _productid; }
 			set { _productid = value; }
@@ -59,7 +59,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Inserttimestamp
+		protected internal virtual DateTime _Inserttimestamp
 		{
 			get { return _inserttimestamp; }
 			set { _inserttimestamp = value; }
@@ -68,7 +68,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Updatetimestamp
+		protected internal virtual DateTime _Updatetimestamp
 		{
 			get { return _updatetimestamp; }
 			set { _updatetimestamp = value; }

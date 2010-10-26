@@ -34,7 +34,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual int _TypeID {
+        protected internal virtual int _TypeID {
             get { return _typeid; }
             set { _typeid = value; }
         }
@@ -42,7 +42,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _Name {
+        protected internal virtual string _Name {
             get { return _name; }
             set { _name = value; }
         }

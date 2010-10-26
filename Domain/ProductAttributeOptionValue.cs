@@ -44,7 +44,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual long _Productid
+		protected internal virtual long _Productid
 		{
 			get { return _productid; }
 			set { _productid = value; }
@@ -53,7 +53,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual long _OptionValueid
+		protected internal virtual long _OptionValueid
 		{
 			get { return _optionvalueid; }
 			set { _optionvalueid = value; }
@@ -62,7 +62,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual decimal _OptionPrice
+		protected internal virtual decimal _OptionPrice
 		{
 			get { return _optionprice; }
 			set { _optionprice = value; }
@@ -71,7 +71,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual string _OptionValueCode
+		protected internal virtual string _OptionValueCode
 		{
 			get { return _optionvaluecode; }
 			set { _optionvaluecode = value; }
@@ -80,7 +80,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual short _SortOrder
+		protected internal virtual short _SortOrder
 		{
 			get { return _sortorder; }
 			set { _sortorder = value; }
@@ -89,7 +89,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Inserttimestamp
+		protected internal virtual DateTime _Inserttimestamp
 		{
 			get { return _inserttimestamp; }
 			set { _inserttimestamp = value; }
@@ -98,7 +98,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Updatetimestamp
+		protected internal virtual DateTime _Updatetimestamp
 		{
 			get { return _updatetimestamp; }
 			set { _updatetimestamp = value; }

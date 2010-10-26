@@ -53,7 +53,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _DocumentID {
+        protected internal virtual long _DocumentID {
             get { return _documentid; }
             set { _documentid = value; }
         }
@@ -61,7 +61,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _DocumentName {
+        protected internal virtual string _DocumentName {
             get { return _documentname; }
             set { _documentname = value; }
         }
@@ -69,7 +69,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _FilePath {
+        protected internal virtual string _FilePath {
             get { return _filepath; }
             set { _filepath = value; }
         }
@@ -77,12 +77,12 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual bool _IsPublished {
+        protected internal virtual bool _IsPublished {
             get { return _ispublished; }
             set { _ispublished = value; }
         }
 
-        internal virtual int _TypeID {
+        protected internal virtual int _TypeID {
             get { return _typeid; }
             set { _typeid = value; }
         }
@@ -93,7 +93,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -101,7 +101,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }

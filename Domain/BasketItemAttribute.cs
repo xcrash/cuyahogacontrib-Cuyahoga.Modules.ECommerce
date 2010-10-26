@@ -45,7 +45,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Basketitemid {
+        protected internal virtual long _Basketitemid {
             get { return _basketitemid; }
             set { _basketitemid = value; }
         }
@@ -53,7 +53,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual int _Attributeid {
+        protected internal virtual int _Attributeid {
             get { return _attributeid; }
             set { _attributeid = value; }
         }
@@ -61,7 +61,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _OptionValue {
+        protected internal virtual string _OptionValue {
             get { return _optionvalue; }
             set { _optionvalue = value; }
         }
@@ -69,7 +69,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _OptionPrice {
+        protected internal virtual long _OptionPrice {
             get { return _optionprice; }
             set { _optionprice = value; }
         }
@@ -77,7 +77,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -85,7 +85,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }

@@ -62,7 +62,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Categoryid {
+        protected internal virtual long _Categoryid {
             get { return _categoryid; }
             set { _categoryid = value; }
         }
@@ -70,7 +70,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _CategoryName {
+        protected internal virtual string _CategoryName {
             get { return _categoryname; }
             set { _categoryname = value; }
         }
@@ -78,7 +78,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _CategoryDescription {
+        protected internal virtual string _CategoryDescription {
             get { return _categorydescription; }
             set { _categorydescription = value; }
         }
@@ -86,7 +86,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual Category _ParentCategoryid {
+        protected internal virtual Category _ParentCategoryid {
             get { return _parentcategoryid; }
             set { _parentcategoryid = value; }
         }
@@ -94,7 +94,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual short _SortOrder {
+        protected internal virtual short _SortOrder {
             get { return _sortorder; }
             set { _sortorder = value; }
         }
@@ -102,7 +102,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual bool _IsPublished {
+        protected internal virtual bool _IsPublished {
             get { return _ispublished; }
             set { _ispublished = value; }
         }
@@ -111,7 +111,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _ImageUrl {
+        protected internal virtual string _ImageUrl {
             get { return _imageurl; }
             set { _imageurl = value; }
         }
@@ -120,7 +120,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual short? _Width {
+        protected internal virtual short? _Width {
             get { return _width; }
             set { _width = value; }
         }
@@ -128,7 +128,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual short? _Height {
+        protected internal virtual short? _Height {
             get { return _height; }
             set { _height = value; }
         }
@@ -136,12 +136,12 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _AltText {
+        protected internal virtual string _AltText {
             get { return _alttext; }
             set { _alttext = value; }
         }
 
-        internal virtual string _CssClass {
+        protected internal virtual string _CssClass {
             get { return _cssClass; }
             set { _cssClass = value; }
         }
@@ -149,7 +149,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -157,12 +157,12 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }
 
-        internal virtual string _BannerImageUrl {
+        protected internal virtual string _BannerImageUrl {
             get { return _bannerImageurl; }
             set { _bannerImageurl = value; }
         }
@@ -232,7 +232,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         }
 
         [XmlIgnore]
-        public bool SortOrderSpecified {
+        public virtual bool SortOrderSpecified {
             get { return _sortOrderSpecified; }
             set { _sortOrderSpecified = value; }
         }
@@ -313,7 +313,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             set { _isChanged |= (_width != value); _width = value; }
         }
 
-        public bool WidthSpecified {
+        public virtual bool WidthSpecified {
             get { return _width != null; }
             set { }
         }
@@ -326,7 +326,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             set { _isChanged |= (_height != value); _height = value; }
         }
 
-        public bool HeightSpecified {
+        public virtual bool HeightSpecified {
             get { return _height != null; }
             set { }
         }
@@ -356,7 +356,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public string Style {
+        public virtual string Style {
             get {
                 return _cssClass;
             }
@@ -408,7 +408,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
 
         #region ICatalogueNode Members
 
-        public string Description {
+        public virtual string Description {
             get {
                 return CategoryDescription;
             }
@@ -417,7 +417,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public IImage Image {
+        public virtual IImage Image {
             get {
                 return this;
             }
@@ -431,7 +431,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         }
 
 
-        public string Name {
+        public virtual string Name {
             get {
                 return CategoryName;
             }
@@ -440,7 +440,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public long NodeID {
+        public virtual long NodeID {
             get {
                 return CategoryID;
             }
@@ -449,7 +449,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public long ParentNodeID {
+        public virtual long ParentNodeID {
             get {
                 if (ParentCategory != null) {
                     return ParentCategory._Categoryid;

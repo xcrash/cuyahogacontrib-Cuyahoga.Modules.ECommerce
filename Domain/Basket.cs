@@ -73,7 +73,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             set { _basketID = value; }
         }
 
-        public DateTime CreatedDate {
+        public virtual DateTime CreatedDate {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }

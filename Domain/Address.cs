@@ -55,7 +55,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual long _Addressid {
+        protected internal virtual long _Addressid {
             get { return _addressid; }
             set { _addressid = value; }
         }
@@ -63,7 +63,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual bool _IsDeleted {
+        protected internal virtual bool _IsDeleted {
             get { return _isdeleted; }
             set { _isdeleted = value; }
         }
@@ -71,7 +71,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _ContactName {
+        protected internal virtual string _ContactName {
             get { return _contactname; }
             set { _contactname = value; }
         }
@@ -79,7 +79,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _AddressLine1 {
+        protected internal virtual string _AddressLine1 {
             get { return _addressline1; }
             set { _addressline1 = value; }
         }
@@ -87,7 +87,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _AddressLine2 {
+        protected internal virtual string _AddressLine2 {
             get { return _addressline2; }
             set { _addressline2 = value; }
         }
@@ -95,7 +95,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _AddressLine3 {
+        protected internal virtual string _AddressLine3 {
             get { return _addressline3; }
             set { _addressline3 = value; }
         }
@@ -103,7 +103,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _State {
+        protected internal virtual string _State {
             get { return _state; }
             set { _state = value; }
         }
@@ -111,7 +111,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _CountryCode {
+        protected internal virtual string _CountryCode {
             get { return _countryCode; }
             set { _countryCode = value; }
         }
@@ -119,7 +119,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _PostCode {
+        protected internal virtual string _PostCode {
             get { return _postcode; }
             set { _postcode = value; }
         }
@@ -127,7 +127,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual string _County {
+        protected internal virtual string _County {
             get { return _county; }
             set { _county = value; }
         }
@@ -135,7 +135,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual State _Stateid {
+        protected internal virtual State _Stateid {
             get { return _stateid; }
             set { _stateid = value; }
         }
@@ -143,7 +143,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Inserttimestamp {
+        protected internal virtual DateTime _Inserttimestamp {
             get { return _inserttimestamp; }
             set { _inserttimestamp = value; }
         }
@@ -151,7 +151,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         /// <summary>
         /// 
         /// </summary>
-        internal virtual DateTime _Updatetimestamp {
+        protected internal virtual DateTime _Updatetimestamp {
             get { return _updatetimestamp; }
             set { _updatetimestamp = value; }
         }
@@ -352,7 +352,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
         #region IAddress Members
 
 
-        public string City {
+        public virtual string City {
             get {
                 return County;
             }
@@ -361,7 +361,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public string Region {
+        public virtual string Region {
             get {
                 return State;
             }
@@ -370,7 +370,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             }
         }
 
-        public string CountryCode {
+        public virtual string CountryCode {
             get {
                 return _CountryCode;
             }

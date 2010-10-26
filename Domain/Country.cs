@@ -48,7 +48,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual string _CountryCode
+		protected internal virtual string _CountryCode
 		{
 			get { return _countrycode; }
 			set { _countrycode = value; }
@@ -57,7 +57,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual string _CountryName
+		protected internal virtual string _CountryName
 		{
 			get { return _countryname; }
 			set { _countryname = value; }
@@ -66,7 +66,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual CurrencyInfo _DefaultCurrencyCode
+		protected internal virtual CurrencyInfo _DefaultCurrencyCode
 		{
 			get { return _defaultcurrencycode; }
 			set { _defaultcurrencycode = value; }
@@ -75,7 +75,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Inserttimestamp
+		protected internal virtual DateTime _Inserttimestamp
 		{
 			get { return _inserttimestamp; }
 			set { _inserttimestamp = value; }
@@ -84,7 +84,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual DateTime _Updatetimestamp
+		protected internal virtual DateTime _Updatetimestamp
 		{
 			get { return _updatetimestamp; }
 			set { _updatetimestamp = value; }

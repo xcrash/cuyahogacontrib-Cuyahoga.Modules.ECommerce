@@ -37,7 +37,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual int _AttributeGroupid
+		protected internal virtual int _AttributeGroupid
 		{
 			get { return _attributegroupid; }
 			set { _attributegroupid = value; }
@@ -46,7 +46,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain
 		/// <summary>
 		/// 
 		/// </summary>
-		internal virtual string _AttributeGroupName
+		protected internal virtual string _AttributeGroupName
 		{
 			get { return _attributegroupname; }
 			set { _attributegroupname = value; }
