@@ -1410,6 +1410,6 @@ xcopy /y /r /d "$(ProjectDir)web\images\*.gif" "%25CUY_DIR%25\%25MOD_PATH%25\Ima
 xcopy /y /r /d "$(ProjectDir)web\images\*.jpg" "%25CUY_DIR%25\%25MOD_PATH%25\Images\"
 xcopy /y /r /d "$(ProjectDir)web\admin\Css\*.css" "%25CUY_DIR%25\%25MOD_PATH%25\Admin\css\"
 xcopy /y /r /d "$(ProjectDir)web\admin\Js\*.js" "%25CUY_DIR%25\%25MOD_PATH%25\Admin\js\"
-xcopy /y /r /d "$(ProjectDir)Install\*.*" "%25CUY_DIR%25\%25MOD_PATH%25\Install\"</PostBuildEvent>
+xcopy /s /y /r /d "$(ProjectDir)Install\*.*" "%25CUY_DIR%25\%25MOD_PATH%25\Install\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
