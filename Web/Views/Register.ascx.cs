@@ -61,7 +61,8 @@ namespace Cuyahoga.Modules.ECommerce.Web.Views {
 
                     AuthenticationModule am = (AuthenticationModule)this.Context.ApplicationInstance.Modules["AuthenticationModule"];
 
-                    am.AuthenticateUser(ctlUser.EmailAddress, ctlUser.Password, false);
+					//TODO: implement
+                    //am.AuthenticateUser(ctlUser.EmailAddress, ctlUser.Password, false);
                     Cuyahoga.Core.Domain.User user = (Cuyahoga.Core.Domain.User)Context.User.Identity;
                     WebStoreContext.Current.WebStoreUser = mod.AccountService.GetWebStoreUser(user.Id);
 

@@ -4,7 +4,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
     using Cuyahoga.Core.Service;
     using Cuyahoga.Core.Domain;
     using Cuyahoga.Core.Service.Membership;
-    using Cuyahoga.Core.Security;
+    //using Cuyahoga.Core.Security;
     using Cuyahoga.Core;
     using Cuyahoga.Web;
 

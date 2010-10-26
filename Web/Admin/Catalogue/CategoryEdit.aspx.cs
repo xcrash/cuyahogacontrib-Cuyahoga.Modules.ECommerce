@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using Cuyahoga.Modules.ECommerce.Util;
 using FredCK.FCKeditorV2;
 using log4net;
+using Category = Cuyahoga.Modules.ECommerce.Domain.Category;
 
 namespace Cuyahoga.Modules.ECommerce.Web.Admin {
 
@@ -122,7 +123,7 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
 
                 if (!IsPostBack) {
 
-                    IList rootNodes = Section.Node.Site.RootNodes;
+                    IList<Node> rootNodes = Section.Node.Site.RootNodes;
                     ddlNodeList.Items.Clear();
                     ddlNodeList.Items.Add(new ListItem("-- select --", ""));
 

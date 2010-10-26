@@ -23,6 +23,7 @@ using Cuyahoga.Modules.ECommerce;
 using Cuyahoga.Modules.ECommerce.Domain;
 using Cuyahoga.Modules.ECommerce.Domain.Catalogue;
 using System.Collections.Generic;
+using Category = Cuyahoga.Modules.ECommerce.Domain.Category;
 
 namespace Cuyahoga.Modules.ECommerce.Web.Admin {
 

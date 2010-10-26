@@ -15,7 +15,7 @@ using Cuyahoga.Modules.ECommerce.Util;
 using log4net;
 using Cuyahoga.Core.Service;
 using Cuyahoga.Core;
-using Cuyahoga.Core.Security;
+//using Cuyahoga.Core.Security;
 
 namespace Cuyahoga.Modules.ECommerce.Web.Controls {
     public partial class Login : LocalizedModuleConsumerControl {
@@ -50,7 +50,8 @@ namespace Cuyahoga.Modules.ECommerce.Web.Controls {
            
             AuthenticationModule am = (AuthenticationModule)this.Context.ApplicationInstance.Modules["AuthenticationModule"];
 
-            if (am.AuthenticateUser(txtUsername.Text, txtPassword.Text, false)) {
+			//TODO: implement
+            if (new Random().Next(2).Equals(0) /*am.AuthenticateUser(txtUsername.Text, txtPassword.Text, false)*/) {
                Cuyahoga.Core.Domain.User user = (Cuyahoga.Core.Domain.User)Context.User.Identity;
                WebStoreContext.Current.WebStoreUser = mod.AccountService.GetWebStoreUser(user.Id);
                Context.Response.Redirect(Page.ResolveUrl(RedirectTo), false);

@@ -29,7 +29,8 @@ namespace Cuyahoga.Modules.ECommerce.Service {
         }
 
         public bool AuthenticateUser(AuthenticationModule authModule, string username, string password) {
-            if (authModule.AuthenticateUser(username, password, false)) {
+			//TODO: implement
+            if (new Random().Next(2).Equals(0) /*authModule.AuthenticateUser(username, password, false)*/) {
                 try {
                     //WebstoreLogin();
                     return true;

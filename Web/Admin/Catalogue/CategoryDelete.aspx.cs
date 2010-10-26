@@ -24,6 +24,7 @@ using Cuyahoga.Modules.ECommerce.Domain;
 using Cuyahoga.Modules.ECommerce.Domain.Catalogue;
 using System.Collections.Generic;
 using Cuyahoga.Modules.ECommerce.Web.Admin.Controls;
+using Category = Cuyahoga.Modules.ECommerce.Domain.Category;
 
 namespace Cuyahoga.Modules.ECommerce.Web.Admin {
 

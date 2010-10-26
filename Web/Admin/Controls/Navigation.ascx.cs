@@ -5,10 +5,10 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin.Controls
     using System.Web.UI;
     using System.Web.UI.WebControls;
     using System.Web.UI.HtmlControls;
-    using Cuyahoga.Web.Admin.Controls;
-    using Cuyahoga.Web.Admin;
+    //using Cuyahoga.Web.Admin.Controls;
+    //using Cuyahoga.Web.Admin;
     using Cuyahoga.Core.Domain;
-    using Cuyahoga.Web.Admin.UI;
+    //using Cuyahoga.Web.Admin.UI;
     using Cuyahoga.Web.UI;
     using Cuyahoga.Core.Util;
 	/// <summary>
