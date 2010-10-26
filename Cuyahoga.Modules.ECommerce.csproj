@@ -1391,25 +1391,18 @@ set MOD_ADMIN_IMAGE_PATH=Modules\ECommerce\Admin\Images
 
 xcopy /y /r /d "$(TargetDir)$(TargetName).dll" "%25CUY_DIR%25\bin\"
 xcopy /y /r /d "$(TargetDir)$(TargetName).pdb" "%25CUY_DIR%25\bin\"
-xcopy /y /r /d "$(ProjectDir)web\views\*.as?x" "%25CUY_DIR%25\%25MOD_PATH%25\views\"
-xcopy /y /r /d "$(ProjectDir)web\*.aspx" "%25CUY_DIR%25\%25MOD_PATH%25\"
-xcopy /y /r /d "$(ProjectDir)web\admin\*.as?x" "%25CUY_DIR%25\%25MOD_ADMIN_PATH%25\"
 
-xcopy /y /r /d "$(ProjectDir)CuyahogaModifications\Templates\ECommerce\Css\*.css" "%25CUY_DIR%25\%25MOD_TEMPLATE_PATH%25\"
-
-xcopy /y /r /d "$(ProjectDir)web\admin\controls\*.as?x" "%25CUY_DIR%25\%25MOD_ADMIN_CONTROL_PATH%25\"
-xcopy /y /r /d "$(ProjectDir)web\admin\images\*.png" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25\"
-xcopy /y /r /d "$(ProjectDir)web\admin\images\*.gif" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25\"
-xcopy /y /r /d "$(ProjectDir)web\admin\images\*.JPG" "%25CUY_DIR%25\%25MOD_ADMIN_IMAGE_PATH%25\"
+rem TODO
+rem rem xcopy /y /r /d "$(ProjectDir)CuyahogaModifications\Templates\ECommerce\Css\*.css" "%25CUY_DIR%25\%25MOD_TEMPLATE_PATH%25\"
 
 copy /y "$(ProjectDir)web\Controls\resources\Strings.resx" "%25CUY_DIR%25\App_GlobalResources\$(TargetName).resx"
 
-xcopy /y /r /d "$(ProjectDir)web\controls\*.as?x" "%25CUY_DIR%25\%25MOD_PATH%25\controls\"
-xcopy /y /r /d "$(ProjectDir)web\images\*.png" "%25CUY_DIR%25\%25MOD_PATH%25\Images\"
-xcopy /y /r /d "$(ProjectDir)web\images\*.gif" "%25CUY_DIR%25\%25MOD_PATH%25\Images\"
-xcopy /y /r /d "$(ProjectDir)web\images\*.jpg" "%25CUY_DIR%25\%25MOD_PATH%25\Images\"
-xcopy /y /r /d "$(ProjectDir)web\admin\Css\*.css" "%25CUY_DIR%25\%25MOD_PATH%25\Admin\css\"
-xcopy /y /r /d "$(ProjectDir)web\admin\Js\*.js" "%25CUY_DIR%25\%25MOD_PATH%25\Admin\js\"
+xcopy /s /y /r /d "$(ProjectDir)web\*.as?x" "%25CUY_DIR%25\%25MOD_PATH%25\"
+xcopy /s /y /r /d "$(ProjectDir)web\*.png" "%25CUY_DIR%25\%25MOD_PATH%25\"
+xcopy /s /y /r /d "$(ProjectDir)web\*.gif" "%25CUY_DIR%25\%25MOD_PATH%25\"
+xcopy /s /y /r /d "$(ProjectDir)web\*.jpg" "%25CUY_DIR%25\%25MOD_PATH%25\"
+xcopy /s /y /r /d "$(ProjectDir)web\*.css" "%25CUY_DIR%25\%25MOD_PATH%25\"
+xcopy /s /y /r /d "$(ProjectDir)web\*.js" "%25CUY_DIR%25\%25MOD_PATH%25\"
 xcopy /s /y /r /d "$(ProjectDir)Install\*.*" "%25CUY_DIR%25\%25MOD_PATH%25\Install\"</PostBuildEvent>
   </PropertyGroup>
 </Project>

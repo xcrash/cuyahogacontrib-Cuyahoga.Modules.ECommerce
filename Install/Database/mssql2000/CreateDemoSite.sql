@@ -1,4 +1,3 @@
-USE CuyahogaECommerceDemov2
 INSERT INTO [dbo].[cuyahoga_template]
 		           ([name]
 		           ,[basepath]
@@ -558,7 +557,8 @@ INSERT INTO [cuyahoga_noderole]
 			            ,[position]
 			            ,[cacheduration]
 			            ,[inserttimestamp]
-			            ,[updatetimestamp])
+			            ,[updatetimestamp]
+			            ,[siteid])
 			      VALUES
 			            (@BASKET_ID
 			            ,@MODULE_TYPE_ID
@@ -568,7 +568,8 @@ INSERT INTO [cuyahoga_noderole]
 			            ,0
 			            ,0
 			            ,GETDATE()
-			            ,GETDATE())
+			            ,GETDATE()
+			            ,@SITE_ID)
 			 
 			 DECLARE @BASKET_SECTION_ID int
 			 SET @BASKET_SECTION_ID = @@identity
@@ -637,7 +638,8 @@ INSERT INTO [cuyahoga_noderole]
 			      ,[position]
 			      ,[cacheduration]
 			      ,[inserttimestamp]
-			      ,[updatetimestamp])
+			      ,[updatetimestamp]
+			      ,[siteid])
 			VALUES
 			      (@CHECKOUT_ID
 			      ,@MODULE_TYPE_ID
@@ -647,7 +649,8 @@ INSERT INTO [cuyahoga_noderole]
 			      ,0
 			      ,0
 			      ,GETDATE()
-			      ,GETDATE())
+			      ,GETDATE()
+			      ,@SITE_ID)
 
 		   DECLARE @CHECKOUT_SECTION_ID int
 		   SET @CHECKOUT_SECTION_ID = @@identity
@@ -715,7 +718,8 @@ INSERT INTO [cuyahoga_noderole]
 		              ,[position]
 		              ,[cacheduration]
 		              ,[inserttimestamp]
-		              ,[updatetimestamp])
+		              ,[updatetimestamp]
+		              ,[siteid])
 		        VALUES
 		              (@CATALOGUE_ID
 		              ,@MODULE_TYPE_ID
@@ -725,7 +729,8 @@ INSERT INTO [cuyahoga_noderole]
 		              ,0
 		              ,0
 		              ,GETDATE()
-		              ,GETDATE())
+		              ,GETDATE()
+		              ,@SITE_ID)
 		   
 		   DECLARE @CATALOGUE_SECTION_ID int
 		   SET @CATALOGUE_SECTION_ID = @@identity
@@ -795,7 +800,8 @@ INSERT INTO [cuyahoga_noderole]
 	               ,[position]
 	               ,[cacheduration]
 	               ,[inserttimestamp]
-	               ,[updatetimestamp])
+	               ,[updatetimestamp]
+	               ,[siteid])
 	         VALUES
 	               (@REGISTER_ID
 	               ,@MODULE_TYPE_ID
@@ -805,7 +811,8 @@ INSERT INTO [cuyahoga_noderole]
 	               ,0
 	               ,0
 	               ,GETDATE()
-	               ,GETDATE())
+	               ,GETDATE()
+	               ,@SITE_ID)
 	    
 	    DECLARE @REGISTER_SECTION_ID int
 	    SET @REGISTER_SECTION_ID = @@identity
@@ -875,7 +882,8 @@ INSERT INTO [cuyahoga_noderole]
 	              ,[position]
 	              ,[cacheduration]
 	              ,[inserttimestamp]
-	              ,[updatetimestamp])
+	              ,[updatetimestamp]
+	              ,[siteid])
 	        VALUES
 	              (@ACCOUNT_ID
 	              ,@MODULE_TYPE_ID
@@ -885,7 +893,8 @@ INSERT INTO [cuyahoga_noderole]
 	              ,0
 	              ,0
 	              ,GETDATE()
-	              ,GETDATE())
+	              ,GETDATE()
+	              ,@SITE_ID)
 	   
 	   DECLARE @ACCOUNT_SECTION_ID int
 	   SET @ACCOUNT_SECTION_ID = @@identity
@@ -956,7 +965,8 @@ INSERT INTO [cuyahoga_noderole]
 	              ,[position]
 	              ,[cacheduration]
 	              ,[inserttimestamp]
-	              ,[updatetimestamp])
+	              ,[updatetimestamp]
+	              ,[siteid])
 	        VALUES
 	              (NULL
 	              ,@MODULE_TYPE_ID
@@ -966,7 +976,8 @@ INSERT INTO [cuyahoga_noderole]
 	              ,0
 	              ,0
 	              ,GETDATE()
-	              ,GETDATE())
+	              ,GETDATE()
+	              ,@SITE_ID)
 	   
 	   DECLARE @BASKET_SUMMARY_SECTION_ID int
 	   SET @BASKET_SUMMARY_SECTION_ID = @@identity
@@ -1045,7 +1056,8 @@ INSERT INTO [cuyahoga_noderole]
 		                ,[position]
 		                ,[cacheduration]
 		                ,[inserttimestamp]
-		                ,[updatetimestamp])
+		                ,[updatetimestamp]
+		                ,[siteid])
 		          VALUES
 		                (NULL
 		                ,@MODULE_TYPE_ID
@@ -1055,7 +1067,8 @@ INSERT INTO [cuyahoga_noderole]
 		                ,0
 		                ,0
 		                ,GETDATE()
-		                ,GETDATE())
+		                ,GETDATE()
+		                ,@SITE_ID)
 		     
 		     DECLARE @NAVIGATION_SECTION_ID int
 		     SET @NAVIGATION_SECTION_ID = @@identity
