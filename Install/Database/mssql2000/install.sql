@@ -26,7 +26,7 @@ GO
 
 
 -- Changeset initial.xml::1255116619640-40::Lee (generated)::(MD5Sum: 2a867cacfe24cea36a57c46332ca4716)
-CREATE TABLE [Ecommerce_AttributeGroupAttribute] (attributeGroupID smallint NOT NULL, attributeID int NOT NULL, inserttimestamp DATETIME CONSTRAINT DF_Ecommerce_AttributeGroupAttribute_inserttimestamp DEFAULT (getdate()) NOT NULL, updatetimestamp DATETIME CONSTRAINT DF_Ecommerce_AttributeGroupAttribute_updatetimestamp DEFAULT (getdate()) NOT NULL);
+CREATE TABLE [Ecommerce_AttributeGroupAttribute] (attributeGroupID smallint NOT NULL, attributeID bigint NOT NULL, inserttimestamp DATETIME CONSTRAINT DF_Ecommerce_AttributeGroupAttribute_inserttimestamp DEFAULT (getdate()) NOT NULL, updatetimestamp DATETIME CONSTRAINT DF_Ecommerce_AttributeGroupAttribute_updatetimestamp DEFAULT (getdate()) NOT NULL);
 GO
 
 
@@ -67,7 +67,7 @@ GO
 
 
 -- Changeset initial.xml::1255116619640-47::Lee (generated)::(MD5Sum: 41805da1f816a8140f836db3c49b7c0)
-CREATE TABLE [Ecommerce_CategoryLink] (categoryLinkID BIGINT IDENTITY  NOT NULL, Categoryid BIGINT NOT NULL, nodeID char(10) NOT NULL, ImageUrl nvarchar(50), Title nvarchar(50), CONSTRAINT [PK_Ecommerce_CategoryLink] PRIMARY KEY (categoryLinkID));
+CREATE TABLE [Ecommerce_CategoryLink] (categoryLinkID BIGINT IDENTITY  NOT NULL, Categoryid BIGINT NOT NULL, nodeID INT NOT NULL, ImageUrl nvarchar(50), Title nvarchar(50), CONSTRAINT [PK_Ecommerce_CategoryLink] PRIMARY KEY (categoryLinkID));
 GO
 
 
