@@ -10,6 +10,7 @@
 		<property column="sortOrder" type="Int16" name="_SortOrder" not-null="true" />
 		<property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
 		<property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
+		<property column="IS_DEFAULT" name="IsDefaultCategory" not-null="true" />
 
     <many-to-one name="Product" class="Product" column="productID" cascade="none" insert="false" update="false" />
     

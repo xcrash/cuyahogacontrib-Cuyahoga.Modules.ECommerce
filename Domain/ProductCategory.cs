@@ -125,6 +125,8 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             set { _isChanged |= (_updatetimestamp != value); _updatetimestamp = value; }
         }
 
+		public virtual bool IsDefaultCategory { get; set; }
+
         /// <summary>
         /// Returns whether or not the object has changed it's values.
         /// </summary>
@@ -139,7 +141,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             get { return _isDeleted; }
         }
 
-        #endregion
+    	#endregion
 
 
         #region Public Functions
