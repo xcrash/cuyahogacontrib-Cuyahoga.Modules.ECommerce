@@ -6,7 +6,7 @@
       <generator class="native"/>
     </id>
     <property column="categoryName" type="String" name="_CategoryName" not-null="true" length="128" />
-    <property column="categoryDescription" type="String" name="_CategoryDescription" not-null="true" length="1024" />
+    <property column="categoryDescription" type="String" name="_CategoryDescription" not-null="true" length="65536" />
     <property column="sortOrder" type="Int16" name="_SortOrder" not-null="true" />
     <property column="isPublished" type="Boolean" name="_IsPublished" not-null="true" />
     <!-- arguably all this image stuff should be normalised and out into a seperate table, going to leave it here for performance reasons though.-->

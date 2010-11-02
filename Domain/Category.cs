@@ -206,7 +206,7 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
             get { return _categorydescription; }
             set {
                 if (value != null)
-                    if (value.Length > 1024)
+                    if (value.Length > 65536)
                         throw new ArgumentOutOfRangeException("Invalid value for CategoryDescription", value, value.ToString());
 
                 _isChanged |= (_categorydescription != value); _categorydescription = value;
