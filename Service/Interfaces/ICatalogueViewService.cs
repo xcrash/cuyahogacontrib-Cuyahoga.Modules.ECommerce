@@ -77,7 +77,7 @@ namespace Cuyahoga.Modules.ECommerce.Service {
         Document GetDocument(int storeId, string culture, long DocumentID);
 
         Category GetCategoryByProductCode(long productCode);
-        Category GetCategory(int storeId, string cultureCode, long nodeID);
+        Category GetCategory(int storeId, string cultureCode, long id);
         Category GetCategory(int storeId, string cultureCode, string catName);
 
         CategoryLink GetCategoryLink(long id);

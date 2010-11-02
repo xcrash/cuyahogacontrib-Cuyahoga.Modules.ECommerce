@@ -130,8 +130,8 @@ namespace Cuyahoga.Modules.ECommerce.Service {
             return cat;
         }
 
-        public Category GetCategory(int storeID, string cultureCode, long nodeID) {
-            Category cat = (Category)_dao.GetObjectById(typeof(Category), nodeID);
+        public Category GetCategory(int storeID, string cultureCode, long id) {
+            Category cat = (Category)_dao.GetObjectById(typeof(Category), id);
             return cat;
         }
 

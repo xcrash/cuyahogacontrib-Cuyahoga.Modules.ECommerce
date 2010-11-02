@@ -135,7 +135,7 @@ namespace Cuyahoga.Modules.ECommerce.Service {
             throw new Exception("The method or operation is not implemented.");
         }
 
-        public Cuyahoga.Modules.ECommerce.Domain.Category GetCategory(int storeId, string cultureCode, long nodeID) {
+        public Cuyahoga.Modules.ECommerce.Domain.Category GetCategory(int storeId, string cultureCode, long id) {
             throw new Exception("The method or operation is not implemented.");
         }
 
