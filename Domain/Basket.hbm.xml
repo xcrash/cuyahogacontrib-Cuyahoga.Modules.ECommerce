@@ -26,10 +26,10 @@
 			<column name="userID" sql-type="int" not-null="false"/>
 		</many-to-one>
     <many-to-one name="AltUserDetails" class="Cuyahoga.Modules.ECommerce.Domain.UserDetail, Cuyahoga.Modules.ECommerce">
-      <column name="altUserID" sql-type="int" not-null="false"/>
+      <column name="altUserID" sql-type="bigint" not-null="false"/>
     </many-to-one>
     <many-to-one name="OrderHeader" class="Cuyahoga.Modules.ECommerce.Domain.OrderHeader, Cuyahoga.Modules.ECommerce">
-      <column name="orderHeaderID" sql-type="int" not-null="false"/>
+      <column name="orderHeaderID" sql-type="bigint" not-null="false"/>
     </many-to-one>
 		<bag name="Payments" inverse="true" lazy="true" cascade="all-delete-orphan">
 			<key column="basketID"/>

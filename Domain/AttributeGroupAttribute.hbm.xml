@@ -3,8 +3,8 @@
 	<class name="AttributeGroupAttribute" table="Ecommerce_AttributeGroupAttribute" lazy="true">
 
 		<composite-id access="field">
-			 <key-property name="_AttributeGroupid" column="attributeGroupID" type="Int16" />
-			 <key-property name="_Attributeid" column="attributeID" type="Int32" />
+			 <key-property name="_AttributeGroupid" column="attributeGroupID" type="Int32" />
+			 <key-property name="_Attributeid" column="attributeID" type="Int64" />
 			
 		</composite-id>
 		<!-- Composite primary key is experimental. View the documentation for syntax. --><!-- problems: gustavohe@gmail.com -->
