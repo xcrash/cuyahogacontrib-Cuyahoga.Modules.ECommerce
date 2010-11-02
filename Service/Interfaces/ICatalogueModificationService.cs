@@ -14,7 +14,7 @@ namespace Cuyahoga.Modules.ECommerce.Service
         bool DeleteProductImage(int storeID, ProductImage pi);
         bool SaveProductRelation(int storeID, ProductRelation pr);
         bool DeleteProductRelation(int storeID, ProductRelation pr);
-        bool SaveCategory(int storeID, Category cat);
+        void SaveCategory(int storeID, Category cat);
         bool DeleteCategoryLink(int storeID, CategoryLink cat);
         bool SaveCategoryLink(int storeID, CategoryLink cat);
         bool DeleteCategory(int storeID, Category cat);

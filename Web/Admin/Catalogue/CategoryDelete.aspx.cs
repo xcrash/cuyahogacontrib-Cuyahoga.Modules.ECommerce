@@ -83,8 +83,14 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
                     ctlBreadCrumb.RenderBreadCrumbTrail(controller.CatalogueViewer.GetCategoryView(controller.Section.Node.Site.Id, controller.Section.Node.Culture, CatID).BreadCrumbTrail);
                     cat.IsPublished = false;
 
-                    if (controller.EditService.SaveCategory(controller.Section.Node.Site.Id, cat)) {
-                        message = "The category was deleted successfully";
+					try
+					{
+						controller.EditService.SaveCategory(controller.Section.Node.Site.Id, cat);
+						message = "The category was deleted successfully";
+					}
+                    catch(Exception ex)
+                    {
+                    	message = ex.Message;
                     }
                 }
 

@@ -119,16 +119,15 @@ namespace Cuyahoga.Modules.ECommerce.Service {
             return true;
         }
 
-        public bool SaveCategory(int storeID, Category cat) {
+        public void SaveCategory(int storeID, Category cat) {
             try {
-                this._sessionManager.OpenSession().SaveOrUpdateCopy(cat);
+                var persistentCat = (Category)this._sessionManager.OpenSession().SaveOrUpdateCopy(cat);
+                cat.CategoryID = persistentCat.CategoryID;
                 this._sessionManager.OpenSession().Flush();
             } catch (Exception e) {
                 LogManager.GetLogger(GetType()).Error(e);
-                return false;
+            	throw;
             }
-
-            return true;
         }
 
         public bool DeleteCategory(int storeID, Category cat) {

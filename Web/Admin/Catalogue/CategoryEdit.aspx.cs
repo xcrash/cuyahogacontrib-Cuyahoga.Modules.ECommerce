@@ -188,13 +188,15 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
 
             Category newCategory = GetUpdatedCategory();
 
-            if (controller.EditService.SaveCategory(1, newCategory)) {
-
-                Response.Redirect(CatalogueBrowser.GetBrowserUrl(this, newCategory.CategoryID, "Your category has been Saved"));
-
-            } else {
-                lblSavingMessage.Text = "Saving failed";
-            }
+			try
+			{
+				controller.EditService.SaveCategory(1, newCategory);
+				Response.Redirect(CatalogueBrowser.GetBrowserUrl(this, newCategory.CategoryID, "Your category has been Saved"));
+			}
+			catch(Exception ex)
+			{
+				lblSavingMessage.Text = "Saving failed";
+			}
         }
 
         public Category GetUpdatedCategory() {
