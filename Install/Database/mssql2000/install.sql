@@ -159,7 +159,7 @@ GO
 
 
 -- Changeset initial.xml::1255116619640-63::Lee (generated)::(MD5Sum: 62e9b49bc0889f4dfbbe49bfcd3a4546)
-CREATE TABLE [ECommerce_Product] (productID BIGINT IDENTITY  NOT NULL, itemCode varchar(128) NOT NULL, productName nvarchar(128) NOT NULL, productDescription nvarchar(4000) NOT NULL, stockLevel int NOT NULL, isPublished bit NOT NULL, basePrice decimal(18,4) NOT NULL, baseCurrencyCode char(3), inserttimestamp DATETIME CONSTRAINT DF_ECommerce_Product_inserttimestamp DEFAULT (getdate()) NOT NULL, updatetimestamp DATETIME CONSTRAINT DF_ECommerce_Product_updatetimestamp DEFAULT (getdate()) NOT NULL, additionalInformation nvarchar(1024), productfamily nvarchar(50), features nvarchar(1024), IsKit bit, basePriceDescription nvarchar(50), shortProductDescription nvarchar(512), CONSTRAINT [PK_products] PRIMARY KEY (productID));
+CREATE TABLE [ECommerce_Product] (productID BIGINT IDENTITY  NOT NULL, itemCode varchar(128) NOT NULL, productName nvarchar(128) NOT NULL, productDescription nvarchar(65536) NOT NULL, stockLevel int NOT NULL, isPublished bit NOT NULL, basePrice decimal(18,4) NOT NULL, baseCurrencyCode char(3), inserttimestamp DATETIME CONSTRAINT DF_ECommerce_Product_inserttimestamp DEFAULT (getdate()) NOT NULL, updatetimestamp DATETIME CONSTRAINT DF_ECommerce_Product_updatetimestamp DEFAULT (getdate()) NOT NULL, additionalInformation nvarchar(1024), productfamily nvarchar(50), features nvarchar(1024), IsKit bit, basePriceDescription nvarchar(50), shortProductDescription nvarchar(65536), CONSTRAINT [PK_products] PRIMARY KEY (productID));
 GO
 
 

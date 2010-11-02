@@ -7,8 +7,8 @@
 		</id>
 		<property column="itemCode" type="String" name="_ItemCode" not-null="true" length="128" />
 		<property column="productName" type="String" name="_ProductName" not-null="true" length="128" />
-		<property column="productDescription" type="StringClob" name="_ProductDescription" not-null="true" length="4000" />
-    <property column="shortProductDescription" type="String" name="ShortProductDescription" not-null="false" length="512" />
+		<property column="productDescription" type="StringClob" name="_ProductDescription" not-null="true" length="65536" />
+    <property column="shortProductDescription" type="String" name="ShortProductDescription" not-null="false" length="65536" />
     <property column="additionalInformation" type="String" name="_AdditionalInformation" not-null="false" length="1024" />
 		<property column="stockLevel" type="Int32" name="_StockLevel" not-null="true" />
 		<property column="isPublished" type="Boolean" name="_IsPublished" not-null="true" />
