@@ -2,17 +2,17 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Cuyahoga.Modules.ECommerce" namespace="Cuyahoga.Modules.ECommerce.Domain">
 	<class name="ProductCategory" table="Ecommerce_ProductCategory" lazy="true">
 
-		<composite-id access="field">
-			 <key-property name="_Categoryid" column="categoryID" type="Int64" />
-			 <key-property name="_Productid" column="productID" type="Int64" />			
-		</composite-id>
-    
+		<id name="Id">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		
 		<property column="sortOrder" type="Int16" name="_SortOrder" not-null="true" />
 		<property column="inserttimestamp" type="DateTime" name="_Inserttimestamp" not-null="true" />
 		<property column="updatetimestamp" type="DateTime" name="_Updatetimestamp" not-null="true" />
 		<property column="IS_DEFAULT" name="IsDefaultCategory" not-null="true" />
 
-    <many-to-one name="Product" class="Product" column="productID" cascade="none" insert="false" update="false" />
-    
+    <many-to-one name="Product" class="Product" column="productID" cascade="none" unique-key="Product_Category" />
+		<property column="categoryID" name="CategoryID" not-null="true" unique-key="Product_Category" />
 	</class>
 </hibernate-mapping>

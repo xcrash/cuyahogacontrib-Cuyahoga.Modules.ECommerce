@@ -80,6 +80,8 @@ namespace Cuyahoga.Modules.ECommerce.Domain {
 
         #region Public Properties
 
+		public virtual int Id { get; set; }
+
         /// <summary>
         /// 
         /// </summary>		
