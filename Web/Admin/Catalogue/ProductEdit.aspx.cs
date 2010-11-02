@@ -241,11 +241,15 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
             bool isNewProduct = (p.ProductID == 0);
 
             CatalogueViewModule controller = Module as CatalogueViewModule;
-            if (!controller.EditService.SaveProduct(1, p)) {
-                return false;
-            } else {
-                productEditor.txtProductID.Text = p.ProductID.ToString();
-            }
+        	try
+        	{
+        		controller.EditService.SaveProduct(1, p);
+				productEditor.txtProductID.Text = p.ProductID.ToString();
+        	}
+        	catch (Exception)
+        	{
+				return false;
+        	}
 
             if (isNewProduct) {
                 

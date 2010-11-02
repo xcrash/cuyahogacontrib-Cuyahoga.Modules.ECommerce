@@ -29,17 +29,15 @@ namespace Cuyahoga.Modules.ECommerce.Service {
 
         #region ICatalogueModificationService Members
 
-        public bool SaveProduct(int storeID, Domain.Product p) {
+        public void SaveProduct(int storeID, Domain.Product p) {
             try {
 
                 this._sessionManager.OpenSession().SaveOrUpdate(p);
                 this._sessionManager.OpenSession().Flush();
             } catch (Exception e) {
                 LogManager.GetLogger(GetType()).Error(e);
-                return false;
+                throw;
             }
-
-            return true;
         }
 
         public bool SaveProductAttribute(int storeID, ProductAttributeOptionValue paov) {

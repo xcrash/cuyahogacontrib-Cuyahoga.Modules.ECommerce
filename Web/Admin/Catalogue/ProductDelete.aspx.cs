@@ -81,9 +81,15 @@ namespace Cuyahoga.Modules.ECommerce.Web.Admin {
                     
                     product.IsPublished = false;
 
-                    if (controller.EditService.SaveProduct(controller.Section.Node.Site.Id, product)) {
-                        message = "The product was deleted successfully";
-                    }
+                	try
+                	{
+                		controller.EditService.SaveProduct(controller.Section.Node.Site.Id, product);
+						message = "The product was deleted successfully";
+                	}
+                	catch (Exception ex)
+                	{
+                		message = ex.Message;
+                	}
                 }
 
                 Response.Redirect(CatalogueBrowser.GetBrowserUrlForProduct(this, controller, ProductID, message));

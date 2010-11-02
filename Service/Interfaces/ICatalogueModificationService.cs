@@ -7,7 +7,7 @@ namespace Cuyahoga.Modules.ECommerce.Service
 {
     public interface ICatalogueModificationService
     {
-        bool SaveProduct(int storeID, Domain.Product p);
+        void SaveProduct(int storeID, Domain.Product p);
         bool SaveProductAttribute(int storeID, ProductAttributeOptionValue paov);
         bool DeleteProductAttribute(int storeID, ProductAttributeOptionValue paov);
         bool SaveProductImage(int storeID, ProductImage pi);
